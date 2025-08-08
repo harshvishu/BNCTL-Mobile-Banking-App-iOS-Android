@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.banking.fragments.transfers.create.sections.account.list.SelectAccountListFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            android:id="@+id/select_account_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="@dimen/text_size_heading"
+            android:textStyle="bold"
+            tools:text="Transfer From" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/select_account_list_label"
+                style="@style/section_label"
+                android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                android:text="@string/transfer_select_account_list_label_text" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/select_account_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:padding="@dimen/fragment_padding"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/list_item_fragment_dashboard_account" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

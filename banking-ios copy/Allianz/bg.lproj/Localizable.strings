@@ -1,0 +1,564 @@
+/*
+  Localizable.strings
+  Allianz (iOS)
+ 
+  Created by Evgeniy Raev on 13.09.21.
+ 
+  Bulgarian Translations
+ */
+
+"name" = "Алианц Банк България";
+
+/* App update */
+"update_minor %@" = "Има нова версия %@";
+"update_minor_open_appstore" = "Отвори AppStore";
+"update_minor_later" = "По-късно";
+"update_force_main" = "Необходимо е да обновите тази апликация";
+"update_force_open_appstore" = "Отвори AppStore";
+
+/* Navigation */
+"nav_dashboard" = "Сметки";
+"nav_transfers" = "Преводи";
+"nav_cards" = "Карти";
+"nav_services" = "Услуги";
+"nav_information" = "Информация";
+
+/* Onboarding - Login */
+"login_title" = "Вход";
+"login_placeholder_username" = "Потребителско име";
+"login_placeholder_password" = "Парола";
+"login_button_sign_in" = "Вход";
+"login_label_news" = "Новини";
+"login_label_contacts" = "Контакти";
+"login_label_branches" = "Клонове";
+"login_label_info" = "Информация";
+"login_button_forgot_password" = "Забравена парола?";
+"login_dialog_forgot_password_title" = "Моля, посетете удобен за вас офис, за да актуализирате паролата си за достъп.\nЗа повече информация се свържете с нас на 0700 13 014";
+"login_dialog_forgot_password_message" = "Трябва да посетите клон на банката за да промените паролата си.";
+"changeLanguage" = "EN";
+"choose_language" = "Choose Language";
+
+/* Terms And Conditions */
+"tearms_title" = "Условия за ползване";
+"temrms_text" = "Алианц Банк Mobile е специализирано приложение за мобилни телефони с операционни системи Android и iOS, чрез което титуляр на сметка или оправомощени от него лица, които са регистрирани потребители на Алианц Е-bank, могат да извършват банкови операции и да получават справочна информация.
+
+Вход в приложението се осъществява чрез валидна комбинация от потребителско име и парола и успешно удостоверяване на идентичността на потребителя чрез одобрените от банката способи.
+
+Алианц Банк Mobile предоставя на потребителите изброените по-долу функционалности:
+• Справочна информация:
+    - за наличност и движения по сметки и депозити;
+    - за регистрирани платежни карти – вид, статус, валидност и извършени операции;
+    - за наредени преводи;
+    - за валутни курсове;
+    - за разположението на банкови офиси и банкомати
+• Платежни услуги
+    - преводи между сметки на титуляра;
+    - вътрешнобанкови преводи в местна и чуждестранна валута;
+    - междубанкови преводи в местна валута;
+    - плащания на битови сметки и застрахователни премии;
+• Други банкови операции:
+    - потвърждение на създадени в Алианц Е-bank преводни нареждания;
+    - заявка на нова дебитна карта;
+    - заявка за теглене на каса;
+    - покупко–продажба на валута;
+
+Всички условия и правила за ползването на приложението са уговорени между страните с документите за регистрация на потребителя за Алианц Е-bank.";
+"terms_checkbox" = "Прочетох и съм съгласен с условията за ползване";
+"terms_close_button" = "Съгласен съм с условията";
+
+/* Information */
+"information_title" = "Информация";
+"information_device" = "За това устройство";
+"information_app" = "За тази апликация";
+"information_device_title" = "За това устройство";
+"information_device_model" = "Системен модел:";
+"information_device_os" = "Операционна система:";
+"information_app_title" = "За тази апликация";
+"information_app_appliaction" = "Апликация";
+"information_app_version %@" = "Версия: %@";
+
+/* Contacts */
+"contacts_title" = "Контакти";
+"contacts_swift %@" = "SWIFT Код (BIC): %@";
+"contacts_contact" = "Контакти:";
+"contacts_social" = "Последвай ни:";
+
+/* Banking */
+
+/* Banking - Dashboard */
+"dashboard_title_accounts" = "Сметки";
+"dashboard_title_cards" = "Карти";
+"dashboard_accounts_label_balance" = "Баланс:";
+"dashboard_label_loading" = "Зареждане на вашите сметки...";
+"dashboard_label_no_accounts" = "Нямате регистрирани сметки.";
+
+/* Banking - Dashboard - Account Details */
+"account_details_title" = "Сметка";
+"account_details_label_available_balance" = "Разполагаемост";
+"account_details_label_blocked_amount" = "Блокирана сума";
+"account_details_label_current_balance" = "Текущо салдо";
+"account_details_label_no_transactions_for_given_period" = "Не са реализирани трансакции за избрания от вас период";
+"account_details_label_opening_balance" = "Начално салдо";
+"account_details_label_overdraft" = "Овърдрафт";
+"account_details_label_loading_statements" = "Зареждане на трансакции за сметката...";
+"account_details_button_balances" = "Баланс";
+"account_details_dialog_balances_title" = "Баланс на сметка";
+
+/* Banking - Dashboard - Account Details - Additional Details */
+"account_additional_details_title" = "Детайли на сметка";
+"account_additional_details_label_beneficiary" = "Титуляр";
+"account_additional_details_label_account_number" = "Номер на сметка";
+"account_additional_details_label_bic" = "BIC";
+"account_additional_details_label_account_type" = "Тип сметка";
+"account_additional_details_label_currency" = "Валута";
+
+/* Banking - Dashboard - Account Details - Statements */
+"statements_label" = "Период:";
+
+/* Statements */
+"statements_filter_title" = "Филтър";
+"statements_filter_label_period" = "Период";
+"statements_filter_button_filter" = "Филтрирай";
+"statements_filter_label_start_date" = "От дата";
+"statements_filter_label_end_date" = "До дата";
+
+/* Statements Details */
+
+"statements_details_title" = "Трансакция детайли";
+"statements_details_label_to_account" = "До";
+"statements_details_label_from_account" = "От";
+"statements_details_label_reason" = "Основание";
+"statements_details_label_additional_reason" = "Още пояснения";
+"statements_details_label_provider" = "Доставчик";
+"statements_details_label_to_beneficiary" = "До";
+"statements_details_label_from_beneficiary" = "От";
+
+"statements_details_status_label_deleted" = "Изтрит";
+"statements_details_status_label_unsigned" = "За подпис";
+"statements_details_status_label_signed" = "Подписан";
+"statements_details_status_label_uploaded" = "Приет";
+"statements_details_status_label_posted" = "Одобрен";
+"statements_details_status_label_canceled" = "Отказан";
+"statements_details_status_label_error" = "Грешен";
+"statements_details_status_label_rejected" = "Неодобрен";
+"statements_details_status_label_paid" = "Платено";
+"statements_details_status_label_pending" = "Чакащ обработка";
+"statements_details_status_label_completed" = "Завършен";
+
+/* Banking - Transfers */
+
+"transfers_title" = "Преводи";
+"transfers_button_between_accounts" = "Между мои сметки";
+"transfers_button_national" = "Кредитен превод в лева";
+"transfers_button_internal" = "Вътрешнобанков валутен превод";
+"transfers_button_pending" = "Чакащи одобрение";
+"transfers_button_templates" = "Макети";
+"transfers_button_history" = "Наредени преводи";
+
+"transfer_type_betweenacc" = "Между мои сметки";
+"transfer_type_intrabank" = "Вътрешнобанков превод";
+"transfer_type_intrabank_currency" = "Валутен превод";
+"transfer_type_interbank" = "Кредитен превод в лева";
+"transfer_type_currency_exchange" = "Обмяна на чуждестранна валута";
+
+/* Banking - Transfers - Create Screen */
+"transfer_form_placeholder_beneficiary_name" = "Получател";
+"transfer_form_placeholder_iban" = "Сметка на получателя";
+"transfer_form_placeholder_amount" = "Сума";
+"transfer_form_placeholder_reason" = "Основание";
+"transfer_form_placeholder_additional_reason" = "Още пояснения";
+"transfer_form_label_settlement_type" = "Тип";
+"transfer_form_label_details" = "Детайли";
+"transfer_form_label_to" = "До";
+"transfer_form_label_from" = "От";
+
+"transfers_label_type_standard" = "Стандартен";
+"transfers_label_type_rings" = "РИНГС";
+"transfers_note_over_standard_limit" = "Забележка: За суми над 100 хил. лв. преводът автоматично се насочва към RINGS";
+
+"transfer_select_account_list_label_text" = "Изберете сметка";
+"transfer_end_of_day" = "В момента банковата система е в режим на промяна на счетоводната дата. Обработката на превода може да отнеме до няколко часа. Натиснете \"ОК\", ако желаете да подпишете документа.";
+
+/* Banking - Transfers - Summary */
+"transfer_summary_title" = "Преглед";
+"transfer_summary_label_amount" = "Сума";
+"transfer_summary_label_from" = "От";
+"transfer_summary_label_to" = "До";
+"transfer_summary_label_reason" = "Основание";
+"transfer_summary_label_additional_reason" = "Още пояснения";
+"transfer_summary_button_confirm_payment" = "Изпрати";
+
+/* Banking - Transfers - End */
+"transfer_end_button_done" = "Готово";
+"transfer_end_success_title" = "Документът е изпратен в банката успешно";
+"transfer_end_success_message" = "Моля да следите обработката му в меню 'Наредени преводи'";
+
+/* Banking - Transfers - Pending */
+"transfer_pending_label_loading" = "Зареждане на чакащи преводи...";
+"transfer_pending_label_header_pending_approval" = "Чакащи одобрение";
+"transfer_pending_label_select_all" = "Избери всички";
+"transfer_pending_label_no_pending_transfers" = "Няма чакащи преводи";
+"transfer_pending_label_card_beneficiary" = "Получател";
+"transfer_pending_label_card_reason" = "Основание";
+"transfer_pending_label_card_additional_reason" = "Още пояснения";
+"transfer_pending_label_card_additional_reason %lld" = "Основание(%lld)";
+"transfer_pending_label_card_from_account" = "От сметка";
+"transfer_pending_label_card_to_account" = "Към сметка";
+"transfer_pending_label_card_documents" = "Документи";
+"transfer_pending_button_reject" = "Откажи";
+"transfer_pending_button_confirm" = "Потвърди";
+"transfer_reject_title_confirm_payment" = "Потвърдете отхвърлянето на вашето плащане";
+"transfer_reject_payment_message" = "Моля, потвърдете отхвърлянето на превода във вашето SmartID приложение";
+"transfer_reject_payment_success" = "Отхвърлянето на плащането е потвърдено";
+
+/* Banking - Transfers - Templates */
+"templates_title" = "Макети";
+"templates_label_loading" = "Зареждане на макети...";
+"templates_label_no_data" = "Няма налични макети";
+
+/* Banking - Transfer History */
+
+"transfers_history_title" = "Наредени преводи";
+"transfers_history_no_items" = "Не са намерени преводи операции за зададения период";
+"transfers_history_label_loading" = "Зареждане на наредени преводи...";
+
+/* Banking - Cards */
+
+/* Banking - Cards - Dashboard */
+"cards_label_loading" = "Зареждане на информация за вашите карти..."; // iOS only
+"cards_label_available_amount" = "Разполагаема сума";
+"cards_label_blocked_amount" = "Блокирани суми:";
+"cards_label_credit_amount" = "Кредитен лимит:";
+"card_action_lock" = "Заключи";
+"card_action_details" = "Детайли на карта";
+"card_action_notifications" = "Нотификации";
+"card_details_title" = "Детайли на карта";
+"cards_label_status" = "Статус";
+"cards_label_card_number" = "Номер";
+"cards_label_card_holder" = "Картодържател";
+"cards_label_card_owner" = "Титуляр";
+"cards_label_valid_thru" = "Валидност";
+"cards_label_linked_to" = "Към сметка";
+"cards_label_currency" = "Валута";
+"cards_label_card_type" = "Тип";
+"cards_label_availability" = "Availability"; // TBD
+"cards_label_approved_overdraft" = "Одобрен овърдрафт";
+"cards_label_credit_limit" = "Кредитен лимит";
+"cards_error_loading_card_transaction_history" = "Грешка при зареждането на трансакции на картата";
+"cards_debit_card" = "Дебитна карта";
+"cards_credit_card" = "Кредитна карта";
+"cards_label_no_cards_registered" = "Нямате регистрирани карти";
+"card_status_new" = "Нова";
+"card_status_active" = "Активна";
+"card_status_blocked" = "Блокирана";
+"card_status_deactivated" = "Деактивирана";
+"card_status_produced_not_received" = "Произведена, неполучена";
+"card_status_unknown" = "Неизвестен";
+
+/* Banking - Cards - Card Transaction history */
+"card_transaction_history_title" = "Трансакции с карта";
+"card_transaction_history_no_items" = "Не са намерени трансакции за зададения период.";
+"card_transaction_history_label_loading" = "Зареждане на трансакции за карта...";
+"card_transaction_history" = "Трансакции с карта";
+
+/* Banking - Cards - Credit card statements */
+"cards_action_credit_card_statements" = "Извлечения";
+"error_loading_credit_card_statements" = "Възникна грешка при опит за зареждане на извлеченията по вашата кредитна карта. Моля, опитайте отново по-късно.";
+"credit_cards_statements_title %@" = "Извлечения за карта %@";
+"credit_cards_statements_label_no_items" = "Не са намерени извлечения за зададения период.";
+"credit_card_statement_download_button_text" = "Изтегли";
+"credit_card_statement_downloading_file_complete" = "Извлечението по кредитната карта е изтеглено успешно.";
+"error_downloading_credit_card_statement" = "Грешка при изтегляне на извлечение. Моля, опитайте отново по-късно.";
+"error_downloading_credit_card_statement_label" = "Грешка";
+"error_downloading_credit_card_statement_label_close" = "Затвори";
+"error_downloading_credit_card_statement_file_already_exists" = "Грешка при изтегляне на извлечение. Файлът вече съществува.";
+
+/* Banking - Cards - New Debit Card */
+"new_debit_card_title" = "Нова дебитна карта";
+"new_debit_card_linked_to_title" = "Избор на разплащателна картова сметка";
+"new_debit_card_linked_to_picker_label" = "Изберете сметка";
+"new_debit_card_label_linked_to_account" = "Разплащателна картова сметка";
+"new_debit_card_label_card_type" = "Вид на картата";
+"new_debit_card_label_name_and_statements" = "Име върху картата и извлечения";
+"new_debit_card_label_name_description" = "Името Ви, с латински букви, както бихте желали да бъде изписано бърху картата (до 21 символа)";
+"new_debit_card_placeholder_emboss_name" = "Името, изписано с латински букви";
+"new_debit_card_placeholder_pickup_location" = "Получаване на картата в";
+"new_debit_card_label_monthly_statements_location" = "Желая да получавам месечно извлечение и уведомления:";
+"new_debit_card_statements_location_radio_option_at_branch" = "При поискване в банката";
+"new_debit_card_statements_location_radio_option_by_email" = "На следния e-mail:";
+"new_debit_card_placeholder_email_for_statements" = "E-mail адрес за извлечение";
+"new_debit_card_text_terms" = "С настоящето декларирам, че всички попълнени от мен данни са верни. Запознат(а) съм с Общите условия за издаване и използване на електронен платежен инструмент - международна дебитна банкова платежна карта на Алианц Банк България и приемам те да бъдат прилагани при уреждане на правата и задълженията между мен и банката.";
+"new_debit_card_button_confirm" = "Потвърди";
+"new_debit_card_label_processing_request" = "Вашата заявка се обработва...";
+"new_debit_card_error_enter_name" = "Моля, въведете име";
+"new_debit_card_error_enter_name_latin_only" = "Please use latin characters only";
+"new_debit_card_error_enter_name_character_limit" = "Name contains more than 21 characters";
+"new_debit_card_error_select_account" = "Моля, изберете сметка";
+"new_debit_card_error_select_card_type" = "Моля, изберете вид на картата";
+"new_debit_card_error_select_location" = "Моля, изберете локация за получаване на картата";
+"new_debit_card_error_please_agree_to_terms" = "Моля, отбележете съгласието си";
+"new_debit_card_error_invalid_email" = "Моля, въведете валиден e-mail адрес";
+"new_debit_card_error_unknown" = "Възникна грешка при заявяването на дебитната карта. Моля, опитайте отново по-късно.";
+"new_debit_card_success_title" = "Вашата заявка е приета успешно.";
+"new_debit_card_success_button_ok" = "OK";
+"error_loading_card_products" = "Възникна грешка при зареждането на типовете карти. Моля, опитайте отново по-късно";
+
+/* Banking - Information */
+
+/* Banking - Information Dashboard */
+"information_button_news" = "Новини";
+"information_button_offices_and_atms" = "Офиси и банкомати";
+"information_button_exchange_rates" = "Валутни курсове";
+"information_button_switch_user" = "Смени клиент";
+"information_button_settings" = "Настройки";
+"information_button_logout" = "Изход от приложението";
+"information_logout_dialog_text" = "Are you sure you want to log out?";
+"information_logout_dialog_confirmation_text" = "Излизане от профила";
+
+/* Banking - Information - Branches and ATMs */
+"offices_and_atms_title" = "Офиси и банкомати";
+"offices_and_atms_button_offices" = "Офиси";
+"offices_and_atms_button_atms" = "Банкомати";
+"offices_and_atms_offices_title" = "Офиси";
+"offices_and_atms_offices_label_loading" = "Зареждане на информация за офиси...";
+"offices_and_atms_atms_title" = "Банкомати";
+"offices_and_atms_atms_label_loading" = "Зареждане на информация за банкомати...";
+
+/* Banking - Information Dashboard */
+"news_title" = "Новини";
+"news_title_message" = "Съобщение";
+
+/* Banking - Information - Exchange Rates */
+"exchange_rates_title" = "Валутни курсове";
+"exchange_rates_label_currency" = "Валута";
+"exchange_rates_label_cash" = "Касово";
+"exchange_rates_label_cashless" = "Безкасово";
+"exchange_rates_label_date" = "Дата";
+"exchange_rates_label_sell" = "Продава";
+"exchange_rates_label_buy" = "Купува";
+"exchange_rates_label_no_exchange_rates_for_given_date" = "Няма валутни курсове за избраната дата";
+"exchange_rates_fixed_rate" = "(фиксинг)";
+"exchange_rates_label_select_currency" = "Избери валута";
+
+/* Information - Change customer */
+"change_customer_title" = "Смени клиент";
+"change_customer_dialog_message" = "Сигурни ли сте, че искате да промените клиента?";
+"change_customer_dialog_confirm" = "Да";
+"change_customer_dialog_reject" = "Не";
+
+/* Banking - Services */
+
+/* Banking - Services Dashboard */
+"services_button_utility_bills" = "Сметки за комунални услуги";
+"services_button_insurance" = "Застраховки";
+"services_button_cash_withdrawal" = "Теглене в брой";
+"services_button_foreign_currency_exchange" = "Обмяна на валута";
+"services_button_request_new_card" = "Заявка за нова дебитна карта";
+
+/* Banking - Services - Utility Bills */
+"utility_bills_title" = "Сметки за комунални услуги";
+"utility_bills_label_loading" = "Зареждане на информация за задължения...";
+"utility_bills_history_label_loading" = "Зареждане на история на задължения...";
+"utility_bills_label_no_unpaid_utility_bills" = "Все още нямате регистрирани сметки за комунални услуги.";
+"utility_bills_label_title" = "Сметки за комунални услуги";
+"utility_bills_check_box_label_select_all" = "Избери всички";
+"utility_bills_label_provider" = "Доставчик";
+"utility_bills_label_subscription_number" = "Абонатен номер";
+"utility_bills_paid" = "Няма текущи задължения";
+"utility_bills_button_pay" = "Плати";
+"utility_bills_end_of_day" = "Уважаеми клиенти, в момента банковата система извършва процедура по приключване на счетоводния ден и по тази причина не е възможно да платите Вашите задължения. Моля, опитайте отново по-късно. Благодарим Ви за разбирането";
+"error_utility_bills_checking_amount_due" = "Грешка при проверка на дължима сума";
+"error_utility_bills_checking_general_error" = "Обща грешка";
+
+"utility_bills_summary_title" = "Резюме";
+"utility_bills_summary_label_amount" = "Сума";
+"utility_bills_summary_label_from" = "От";
+"utility_bills_summary_label_select_source_account" = "Плати от";
+"utility_bills_summary_select_source_account_picker_title" = "Плати от";
+"utility_bills_summary_button_confirm_payment" = "Потвърди";
+"utility_bills_history_title" = "История на платежни за комунални услуги";
+
+/* Banking - Services - Insurances */
+"insurances_title" = "Застраховки";
+"insurances_label_loading" = "Зареждане на информация за застраховки...";
+"insurances_label_no_insurances" = "Не са открити застрахователни полици.";
+"insurance_list_item_label_amount" = "Сума";
+"insurance_list_item_label_amount_bgn" = "Сума BGN";
+"insurance_list_item_label_date" = "Дата";
+"insurance_list_item_label_policy_num" = "Номер на полица";
+"insurance_list_item_label_insurer" = "Застраховател";
+"insurance_list_item_label_account" = "Сметка";
+"insurance_list_item_label_account_bgn" = "Сметка BGN";
+"insurance_list_item_label_installment_number" = "Номер на вноска";
+"insurance_message_no_insurances" = "Няма намерени записи";
+"insurance_button_pay" = "Плащане";
+
+/* Banking - Services - Insurances Payment */
+"insurance_payment_title" = "Плащане на застраховка";
+"insurance_payment_label_select_source_account" = "Плати от";
+"insurance_payment_select_source_account_picker_title" = "Плати от";
+"insurance_payment_label_amount" = "Сума";
+"insurance_payment_label_from" = "От";
+"insurance_payment_button_confirm" = "Потвърди";
+
+/* Banking - Services - Cash Withdrawal */
+"cash_withdrawal_title" = "Заявка за теглене в брой";
+"cash_withdrawal_form_placeholder_location" = "Банков офис за теглене";
+"cash_withdrawal_form_placeholder_amount" = "Сума";
+"cash_withdrawal_form_placeholder_date" = "Дата";
+"cash_withdrawal_form_placeholder_description" = "Описание";
+"cash_withdrawal_button_next" = "Продължи";
+
+/* Banking - Services - Currency Exchange*/
+"currency_exchange_form_placeholder_preferential_rates_pin" = "ПИН за преференциален курс";
+"currency_exchange_form_label_operation_type" = "Тип на операцията";
+"currency_exchange_label_type_sell" = "Продавам";
+"currency_exchange_label_type_buy" = "Купувам";
+
+"transfer.title.intrabank" = "Iternal currency payment";
+"transfer.title.interbank" = "To National IBAN";
+"transfer.title.betweenacc" = "Bettween Own Accounts";
+"transfer.title.international" = "International";
+
+/* Common stuff */
+
+"common_label_loading" = "Зареждане..."; // iOS Only
+"common_label_currency" = "Валута";
+"common_button_next" = "Продължи";
+"select_account_list_label_select_account" = "Изберете сметка:";
+"select_account_list_label_balance" = "Баланс"; // Not used in iOS, kept for consistency
+"common_confirm_message" = "Да";
+"common_reject_message" = "Не";
+
+/* Operation Flows - SCA, non-SCA, outcomes */
+"operation_common_success_label_title" = "Успех";
+"operation_common_success_label_message" = "Операцията е извършена успешно";
+"operation_common_rejected_label_title" = "Отхвърлена";
+"operation_common_rejected_label_message" = "Операцията е отхвърлена";
+"operation_common_cancelled_label_title" = "Отменена";
+"operation_common_cancelled_label_message" = "Операцията е отменена";
+"operation_common_failed_label_title" = "Грешка";
+"operation_common_failed_label_message" = "Възникна неочакване грешка при изпълнение на операцията";
+/* Operation Flows - Generic Waiting Simple */
+"operation_common_waiting_simple_label_title" = "Зареждане...";
+"operation_common_waiting_simple_label_message" = "Вашата заявка се обработва, моля изчакайте";
+/* Operation Flows - Generic Waiting SCA */
+"operation_common_waiting_sca_label_title" = "Потвърждаване";
+"operation_common_waiting_sca_label_message" = "Използвайте приложението Allianz SmartID за потвърждение на тази операция.";
+
+/* Operation Flows - Specific - Login */
+"operation_login_waiting_sca_label_title" = "Потвърдете заявката за вход";
+"operation_login_waiting_sca_label_message" = "Използвайте приложението Allianz SmartID за потвърждение на заявката за вход.";
+/* Operation Flows - Specific - Transfer */
+"operation_transfer_waiting_sca_label_title" = "Потвърждаване";
+"operation_transfer_waiting_sca_label_message" = "Използвайте приложението Allianz SmartID за потвърждение на трансакция.";
+"operation_transfer_success_label_title" = "Документът е изпратен в банката успешно";
+"operation_transfer_success_label_message" = "Моля да следите обработката му в меню 'Наредени преводи'.";
+"operation_transfer_rejected_label_title" = "Отказана";
+"operation_transfer_rejected_label_message" = "Операцията е отказана със SmartID";
+"operation_transfer_cancelled_label_title" = "Отхвърлена";
+"operation_transfer_cancelled_label_message" = "Трансакцията е отхвърлена";
+"operation_transfer_failed_label_title" = "Грешка";
+"operation_transfer_failed_label_message" = "Възникна грешка при обработка на вашата трансакция. Моля, опитайте отново по-късно.";
+"operation_transfer_failed_duplicated_transaction_label_title" = "Failed";
+"operation_transfer_failed_duplicated_transaction_label_message" = "Внимание дублирано плащане. Преводът не може да бъде извършен.";
+"operation_transfer_failed_insufficient_funds_label_title" = "Грешка";
+"operation_transfer_failed_insufficient_funds_label_message" = "Недостатъчна наличност по сметка";
+
+/* Confrim OTP dialog */
+"operation_common_confirmation_title" = "Няма връзка с приложение SmartID. Можете да използвате SMS код.";
+"operation_common_confirmation_accept" = "Изплолзвайте SMS";
+"operation_common_confirmation_decline" = "Отказ";
+
+"operation_login_confirmation_title" = "Няма връзка с приложение SmartID. Можете да използвате SMS код.";
+"operation_login_confirmation_accept" = "Изплолзвайте SMS";
+"operation_login_confirmation_decline" = "Отказ";
+
+"operation_transfer_confirmation_title" = "Няма връзка с приложение SmartID. Можете да използвате SMS код.";
+"operation_transfer_confirmation_accept" = "Изплолзвайте SMS";
+"operation_transfer_confirmation_decline" = "Отказ";
+
+/* OTP dialog */
+"operation_common_otp_title" = "Потвърдете операцията чрез SMS код";
+"operation_common_otp_message" = "Въведете 6-цифрения код, който сте получили чрез SMS на мобилния телефон:";
+
+"operation_common_otp_pin_title" = "Потвърдете операцията чрез SMS код и ПИН";
+"operation_common_otp_pin_message" = "Въведете 6-цифрения код, който сте получили чрез SMS и ПИН кода за SmartID:";
+
+"operation_common_otp_code" = "Код за потвърждение";
+"operation_common_otp_pin" = "SmartID ПИН";
+"operation_common_otp_confirm" = "Потвърди";
+
+"operation_login_otp_title" = "Вход чрез SMS код";
+"operation_login_otp_message" = "Въведете 6-цифрения код, който сте получили чрез SMS на мобилния телефон:";
+
+"operation_login_otp_pin_title" = "Вход чрез SMS код и ПИН";
+"operation_login_otp_pin_message" = "Въведете 6-цифрения код, който сте получили чрез SMS и ПИН кода за SmartID:";
+
+"operation_login_otp_code" = "Код за потвърждение";
+"operation_login_otp_pin" = "SmartID ПИН";
+"operation_login_otp_confirm" = "Потвърди";
+
+"operation_transfer_otp_title" = "Потвърдете трансакцията чрез SMS код";
+"operation_transfer_otp_message" = "Въведете 6-цифрения код, който сте получили чрез SMS на мобилния телефон:";
+
+"operation_transfer_otp_pin_title" = "Потвърдете трансакцията чрез SMS код и ПИН";
+"operation_transfer_otp_pin_message" = "Въведете 6-цифрения код, който сте получили чрез SMS и ПИН кода за SmartID:";
+
+"operation_transfer_otp_code" = "Код за потвърждение";
+"operation_transfer_otp_pin" = "SmartID ПИН";
+"operation_transfer_otp_confirm" = "Потвърди";
+
+/* outcome */
+"operation_outcome_button_done" = "Добре";
+
+/* Settings */
+"settings_title" = "Настройки";
+"settings_label_languages" = "Език";
+
+/* Language */
+"language_title" = "Език";
+"language_EN" = "English";
+"language_BG" = "Български";
+"language_dialog_message" = "Сигурни ли сте, че искате да промените езика?";
+"language_dialog_confirm" = "Да";
+"language_dialog_reject" = "Не";
+
+/* Errors */
+
+"error_no_connection" = "Няма връзка с Интернет. Моля проверете настройките за Wi-Fi или мобилни данни.";
+"error_authentication_login" = "Грешка при вход";
+"error_authentication_invalid_credentials_login" = "Грешка при вход: Невалидно потребителско име или парола";
+"error_authentication_invalid_username_login" = "Грешка при вход: Невалидно потребителско име или парола";
+"error_authentication_invalid_password_login" = "Грешка при вход: Невалидно потребителско име или парола";
+"error_authentication_sca_cancelled_login" = "Грешка при вход: Отказан вход в Allianz SmartID";
+"error_authentication_sca_expired_login" = "Грешка при вход: Времето за потвърждение с Allianz SmartID изтече.";
+"error_authentication_sca_error_login" = "Грешка при вход: Грешка в Allianz SmartID";
+"error_authentication_no_fallback" = "Грешка при вход: Грешка в Allianz SmartID";
+"error_authentication_invalid_mobile_number_error_login" = "Грешка при вход: Регистрирани сте с друг мобилен номер в електронното банкиране. Моля направете нова регистрация през SmartID.";
+"error_loading_accounts" = "Грешка при опит за зареждане на сметкита, моля опитайте по-късно";
+
+"error_cash_withdrawal_date" = "Необходимо е предизвестие от поне два работни дни";
+
+"common_error_field_required" = "Това поле е необходимо";
+
+"error_transfer_validation_source_account_missing" = "Сметка на наредителя е задължителна";
+"error_transfer_validation_invalid_iban" = "Невалиден IBAN";
+"error_transfer_validation_same_source_and_destination" = "Сметката на наредителя не може да съвпада със сметката на получателя. Моля, изберете друга сметка.";
+"error_transfer_validation_invalid_bulgarian_iban" = "Може да наредите превод само към банки в България";
+"error_transfer_validation_required_beneficiary" = "Въведете получател";
+"error_transfer_validation_required_reason" = "Въведете основание";
+"error_transfer_validation_reason_invalid_characters %@" = "Невалидни знаци %@";
+"error_transfer_validation_amount_greater_than_zero" = "Въведете сума по-голяма от 0.00";
+"error_transfer_validation_betweenacc_same_currency_account" = "Сметките на наредител и получател трябва да са в една и съща валута";
+"error_transfer_validation_insufficient_funds" = "Недостатъчна наличност";
+"error_transfer_validation_same_currency" = "Сметките на наредител и получател трябва да са в една и съща валута";
+"error_transfer_interbank_wrong_transfer_system" = "Платежна система РИНГС невалидна. При превод в системата на банката РИНГС не се използва";
+"error_currency_transfer_validation_same_currency" = "Акаунтите не трябва да са с еднаква валута";
+"error_transfer_alert_close" = "Затвори";
+"error_transfer_alert_ok" = "ОК";
+"error_transfer_alert_cancel" = "Откажи";
+
+"error_transfer_validation_preferential_rates_pin_length" = "Дължината на ПИН-а трябва да е до 10 символа";
+"error_transfer_not_selected_approve" = "Моля изберете поне един чакащ превод за одобрение";
+"error_transfer_not_selected_reject" = "Моля, изберете поне един трансфер за отказ";

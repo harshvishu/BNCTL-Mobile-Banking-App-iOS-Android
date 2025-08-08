@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/fragment_views_margin_vertical"
+    android:background="@color/list_item_background"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/fragment_padding">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter">
+
+            <ImageView
+                android:id="@+id/flag_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/flag_chf"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currency_units"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/flag_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/currency_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/text_margin_horizontal"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/currency_units"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="CHF" />
+
+            <TextView
+                android:id="@+id/delimiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/text_margin_horizontal"
+                android:text="-"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/currency_label"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/fixed_rate_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/text_margin_horizontal"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/delimiter"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1.84324" />
+
+            <TextView
+                android:id="@+id/fixed_rate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/text_margin_horizontal"
+                android:text="@string/exchange_rates_fixed_rate"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fixed_rate_amount"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter">
+
+            <TextView
+                android:id="@+id/cash_label"
+                android:layout_width="0dp"
+                app:layout_constraintHorizontal_weight="2.5"
+                android:layout_height="wrap_content"
+                android:text="@string/exchange_rates_label_cash"
+                android:textColor="@color/text_color_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cash_buy_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cash_buy_amount"
+                app:layout_constraintHorizontal_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cash_sell_amount"
+                app:layout_constraintStart_toEndOf="@id/cash_label"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1.95" />
+
+            <TextView
+                android:id="@+id/cash_sell_amount"
+                android:layout_width="0dp"
+                app:layout_constraintHorizontal_weight="1.5"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cash_refresh_button"
+                app:layout_constraintStart_toEndOf="@id/cash_buy_amount"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1.95" />
+            <ImageButton
+                android:visibility="invisible"
+                app:layout_constraintHorizontal_weight="2.5"
+                android:id="@+id/cash_refresh_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_refresh"
+                app:layout_constraintStart_toEndOf="@id/cash_sell_amount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter">
+
+            <TextView
+                android:id="@+id/cashless_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_weight="2.5"
+                android:text="@string/exchange_rates_label_cashless"
+                android:textColor="@color/text_color_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cashless_buy_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cashless_buy_amount"
+                android:layout_width="0dp"
+                app:layout_constraintHorizontal_weight="2"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cashless_sell_amount"
+                app:layout_constraintStart_toEndOf="@id/cashless_label"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1.95" />
+
+            <TextView
+                android:id="@+id/cashless_sell_amount"
+                android:layout_width="0dp"
+                app:layout_constraintHorizontal_weight="1.5"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cashless_refresh_button"
+                app:layout_constraintStart_toEndOf="@id/cashless_buy_amount"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1.95" />
+
+            <ImageButton
+                android:visibility="invisible"
+                android:id="@+id/cashless_refresh_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_weight="2.5"
+                android:src="@drawable/ic_refresh"
+                app:layout_constraintStart_toEndOf="@id/cashless_sell_amount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

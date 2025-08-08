@@ -1,0 +1,6 @@
+.DS_Store
+*.xcuserstate
+xcuserdata/**/*
+!xcuserdata/**/xcschemes/*
+Breakpoints_v2.xcbkptlist
+

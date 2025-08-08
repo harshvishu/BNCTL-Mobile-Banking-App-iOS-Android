@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_graph_dashboard">
+
+    <navigation
+        android:id="@+id/nav_graph_dashboard"
+        app:startDestination="@+id/nav_fragment_dashboard">
+
+        <fragment
+            android:id="@+id/nav_fragment_dashboard"
+            android:name="tl.bnctl.banking.ui.banking.fragments.dashboard.DashboardFragment"
+            android:label="@string/nav_dashboard"
+            tools:layout="@layout/fragment_dashboard">
+
+            <action
+                android:id="@+id/action_nav_fragment_dashboard_to_nav_fragment_account_details"
+                app:destination="@+id/nav_fragment_account_details" />
+
+            <argument
+                android:name="redirectToAccountId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_account_details"
+            android:name="tl.bnctl.banking.ui.banking.fragments.accounts.details.AccountDetailsFragment"
+            tools:layout="@layout/fragment_account_details">
+
+            <action
+                android:id="@+id/action_nav_fragment_account_details_to_nav_fragment_account_additional_details"
+                app:destination="@+id/nav_fragment_account_additional_details" />
+
+            <action
+                android:id="@+id/action_nav_fragment_account_details_to_nav_fragment_account_statement_filter"
+                app:destination="@+id/nav_fragment_account_statement_filter" />
+
+            <action
+                android:id="@+id/action_nav_fragment_account_details_to_nav_fragment_account_statement"
+                app:destination="@+id/nav_fragment_account_account_statement" />
+
+            <argument
+                android:name="accountId"
+                app:argType="string" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_account_additional_details"
+            android:name="tl.bnctl.banking.ui.banking.fragments.accounts.additional.AccountAdditionalDetailsFragment"
+            tools:layout="@layout/fragment_account_additional_details">
+
+            <argument
+                android:name="beneficiary"
+                android:defaultValue="beneficiary"
+                app:argType="string"
+                app:nullable="false" />
+
+            <argument
+                android:name="accountNumber"
+                android:defaultValue="accountNumber"
+                app:argType="string"
+                app:nullable="false" />
+
+            <argument
+                android:name="bic"
+                android:defaultValue="bic"
+                app:argType="string"
+                app:nullable="false" />
+
+            <argument
+                android:name="typeAccount"
+                android:defaultValue="typeAccount"
+                app:argType="string"
+                app:nullable="false" />
+
+            <argument
+                android:name="currency"
+                android:defaultValue="currency"
+                app:argType="string"
+                app:nullable="false" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_account_account_statement"
+            android:name="tl.bnctl.banking.ui.banking.fragments.accounts.statements.AccountStatementsFragment"
+            tools:layout="@layout/fragment_transfer_history" />
+
+    </navigation>
+
+    <action
+        android:id="@+id/action_global_nav_graph_dashboard"
+        app:destination="@id/nav_graph_dashboard">
+
+        <argument
+            android:name="redirectToAccountId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+    </action>
+
+    <navigation
+        android:id="@+id/nav_graph_transfers"
+        app:startDestination="@id/nav_fragment_transfers">
+
+        <fragment
+            android:id="@+id/nav_fragment_transfers"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.TransfersFragment"
+            tools:layout="@layout/fragment_transfers">
+            <!-- Transfers -> IBAN Transfer -->
+            <action
+                android:id="@+id/action_nav_fragment_transfers_to_nav_fragment_iban_transfer"
+                app:destination="@id/nav_fragment_iban_transfer" />
+            <!-- Transfers -> Between Own Accounts Transfer -->
+            <action
+                android:id="@+id/action_nav_transfers_to_nav_fragment_transfer_between_own_accounts"
+                app:destination="@id/nav_fragment_transfer_between_own_accounts" />
+            <!-- Transfers -> Internal Currency Transfer -->
+            <action
+                android:id="@+id/action_nav_transfers_to_nav_fragment_internal_transfer"
+                app:destination="@id/nav_fragment_internal_transfer" />
+            <!-- Transfers -> Pending Transfers -->
+            <action
+                android:id="@+id/action_nav_transfers_to_nav_fragment_pending_transfers"
+                app:destination="@id/nav_fragment_transfer_pending" />
+            <!-- Transfers -> Templates -->
+            <action
+                android:id="@+id/action_nav_transfers_to_nav_fragment_templates"
+                app:destination="@id/common_templates_navigation">
+                <argument
+                    android:name="directToTransferCreation"
+                    app:argType="boolean" />
+            </action>
+
+            <action
+                android:id="@+id/action_nav_fragment_transfers_to_nav_fragment_transfer_history"
+                app:destination="@id/nav_fragment_transfer_history" />
+        </fragment>
+        <include app:graph="@navigation/common_templates_navigation" />
+
+        <fragment
+            android:id="@+id/nav_fragment_transfer_between_own_accounts"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.create.screens.betweenacc.TransferBetweenOwnAccountsFragment"
+            tools:layout="@layout/fragment_transfer_base">
+
+            <action
+                android:id="@+id/action_nav_fragment_transfer_between_own_accounts_to_nav_fragment_transfer_summary"
+                app:destination="@id/nav_fragment_transfer_summary" />
+
+            <action
+                android:id="@+id/action_nav_fragment_transfer_between_own_accounts_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_iban_transfer"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.create.screens.iban.IbanTransferFragment"
+            tools:layout="@layout/fragment_transfer_base">
+
+            <action
+                android:id="@+id/action_nav_fragment_iban_transfer_to_nav_fragment_transfer_summary"
+                app:destination="@id/nav_fragment_transfer_summary" />
+
+            <action
+                android:id="@+id/action_nav_fragment_iban_transfer_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+
+        </fragment>
+        <fragment
+            android:id="@+id/nav_fragment_account_transfer"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.create.screens.account.AccountTransferFragment"
+            tools:layout="@layout/fragment_transfer_base">
+
+            <action
+                android:id="@+id/action_nav_fragment_account_transfer_to_nav_fragment_transfer_summary"
+                app:destination="@id/nav_fragment_transfer_summary" />
+
+            <action
+                android:id="@+id/action_nav_fragment_account_transfer_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_internal_transfer"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.create.screens.intrabank.InternalTransferFragment"
+            tools:layout="@layout/fragment_transfer_base">
+
+            <action
+                android:id="@+id/action_nav_fragment_internal_transfer_to_nav_fragment_transfer_summary"
+                app:destination="@id/nav_fragment_transfer_summary" />
+
+            <action
+                android:id="@+id/action_nav_fragment_internal_transfer_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_currency_exchange"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.currencyExchange.CurrencyExchangeFragment"
+            android:label="CurrencyExchangeFragment"
+            tools:layout="@layout/fragment_transfer_base">
+
+            <action
+                android:id="@+id/action_nav_fragment_currency_exchange_to_nav_fragment_transfer_confirm"
+                app:destination="@id/nav_fragment_transfer_confirm"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <action
+                android:id="@+id/action_nav_fragment_currency_exchange_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_transfer_summary"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.summary.TransferSummaryFragment"
+            tools:layout="@layout/fragment_transfer_summary">
+
+            <action
+                android:id="@+id/action_nav_fragment_summary_to_nav_fragment_transfer_confirm"
+                app:destination="@id/nav_fragment_transfer_confirm"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <action
+                android:id="@+id/action_nav_transfer_summary_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <argument
+                android:name="summary"
+                app:argType="tl.bnctl.banking.data.transfers.model.TransferSummary" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_transfer_confirm"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.confirm.TransferConfirmFragment"
+            tools:layout="@layout/fragment_transfer_confirm">
+
+            <action
+                android:id="@+id/action_nav_fragment_transfer_confirm_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <argument
+                android:name="transferConfirm"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.transfers.model.TransferConfirmRequest"
+                app:nullable="true" />
+
+            <argument
+                android:name="redirectToAccountId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+
+            <argument
+                android:name="transferExecute"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.transfers.model.TransferSummary"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_transfer_end"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.end.TransferEndFragment"
+            tools:layout="@layout/fragment_transfer_end">
+
+            <argument
+                android:name="transferEnd"
+                app:argType="tl.bnctl.banking.data.transfers.model.TransferEnd" />
+
+            <argument
+                android:name="redirectToAccountId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+
+            <argument
+                android:name="showTransferEndSubMessage"
+                android:defaultValue="true"
+                app:argType="boolean" />
+
+            <argument
+                android:defaultValue="@null"
+                android:name="transferEndSubMessage"
+                app:argType="string"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_transfer_pending"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.pending.PendingTransfersFragment"
+            tools:layout="@layout/fragment_pending_transfers">
+
+            <action
+                android:id="@+id/action_nav_fragment_transfer_pending_to_nav_fragment_transfer_confirm"
+                app:destination="@id/nav_fragment_pending_transfer_confirm"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+            <action
+                android:id="@+id/action_nav_fragment_transfer_pending_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_pending_transfer_confirm"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.pending.confirm.PendingTransferConfirmFragment"
+            tools:layout="@layout/fragment_transfer_confirm">
+
+            <argument
+                android:name="action"
+                android:defaultValue="confirm"
+                app:argType="string"
+                app:nullable="false" />
+
+            <action
+                android:id="@+id/action_nav_fragment_pending_transfer_confirm_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_transfers" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_transfer_history"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.history.TransferHistoryFragment"
+            android:label="fragment_transfer_history"
+            tools:layout="@layout/fragment_transfer_history" />
+
+    </navigation>
+
+    <navigation
+        android:id="@+id/nav_graph_services"
+        app:startDestination="@id/nav_fragment_services">
+
+        <fragment
+            android:id="@+id/nav_fragment_currency_exchange"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.currencyExchange.CurrencyExchangeFragment"
+            android:label="CurrencyExchangeFragment"
+            tools:layout="@layout/fragment_transfer_base">
+
+            <action
+                android:id="@+id/action_nav_fragment_currency_exchange_to_nav_fragment_transfer_confirm"
+                app:destination="@id/nav_fragment_transfer_confirm"
+                app:popUpTo="@id/nav_fragment_services" />
+
+            <action
+                android:id="@+id/action_nav_fragment_currency_exchange_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_services" />
+
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_services"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.ServicesFragment"
+            tools:layout="@layout/fragment_services">
+
+            <action
+                android:id="@+id/action_nav_fragment_services_to_nav_fragment_insurance"
+                app:destination="@id/nav_fragment_insurance" />
+
+            <action
+                android:id="@+id/action_nav_fragment_services_to_nav_fragment_currency_exchange"
+                app:destination="@id/nav_fragment_currency_exchange" />
+
+            <action
+                android:id="@+id/action_nav_fragment_services_to_nav_fragment_utility_bills"
+                app:destination="@id/nav_fragment_utility_bills" />
+
+            <action
+                android:id="@+id/action_nav_fragment_services_to_nav_fragment_cash_withdrawal"
+                app:destination="@id/nav_fragment_cash_withdrawal" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_insurance"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.insurance.InsuranceFragment"
+            tools:layout="@layout/fragment_insurance">
+
+            <action
+                android:id="@+id/action_nav_fragment_insurance_to_nav_fragment_confirm"
+                app:destination="@id/nav_fragment_insurance_confirm" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_insurance_confirm"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.insurance.confirm.InsuranceConfirmFragment"
+            tools:layout="@layout/fragment_insurance_confirm">
+
+            <action
+                android:id="@+id/action_nav_fragment_insurance_confirm_to_nav_fragment_transfer_confirm"
+                app:destination="@id/nav_fragment_transfer_confirm"
+                app:popUpTo="@id/nav_fragment_services" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_transfer_confirm"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.confirm.TransferConfirmFragment"
+            tools:layout="@layout/fragment_transfer_confirm">
+
+            <action
+                android:id="@+id/action_nav_fragment_transfer_confirm_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_services" />
+
+            <argument
+                android:name="transferConfirm"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.transfers.model.TransferConfirmRequest"
+                app:nullable="true" />
+
+            <argument
+                android:name="redirectToAccountId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+
+            <argument
+                android:name="transferExecute"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.transfers.model.TransferSummary"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_transfer_end"
+            android:name="tl.bnctl.banking.ui.banking.fragments.transfers.end.TransferEndFragment"
+            tools:layout="@layout/fragment_transfer_end">
+            <argument
+                android:name="transferEnd"
+                app:argType="tl.bnctl.banking.data.transfers.model.TransferEnd" />
+            <argument
+                android:name="redirectToAccountId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+
+            <argument
+                android:name="showTransferEndSubMessage"
+                android:defaultValue="true"
+                app:argType="boolean" />
+
+            <argument
+                android:defaultValue="@null"
+                android:name="transferEndSubMessage"
+                app:argType="string"
+                app:nullable="true" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_utility_bills"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.utilityBills.UtilityBillFragment"
+            android:label="fragment_service_utility_bill"
+            tools:layout="@layout/fragment_service_utility_bill">
+
+            <action
+                android:id="@+id/action_nav_fragment_utility_bills_to_nav_fragment_utility_bills_summary"
+                app:destination="@id/nav_fragment_utility_bills_summary" />
+
+            <action
+                android:id="@+id/action_nav_fragment_utility_bills_to_nav_fragment_utility_bills_history"
+                app:destination="@id/nav_fragment_utility_bills_history" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_utility_bills_summary"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.utilityBills.summary.UtilityBillSummaryFragment"
+            android:label="fragment_service_utility_bill_summary"
+            tools:layout="@layout/fragment_service_utility_bill_summary">
+
+            <action
+                android:id="@+id/action_nav_fragment_utility_bills_summary_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_services" />
+
+            <argument
+                android:name="selectedUtilityBills"
+                app:argType="string[]" />
+
+            <argument
+                android:name="totalAmount"
+                android:defaultValue="0"
+                app:argType="string" />
+
+            <argument
+                android:name="totalAmountCurrency"
+                app:argType="string" />
+
+            <action
+                android:id="@+id/action_nav_fragment_utility_bills_summary_to_nav_fragment_utility_bills_confirm"
+                app:destination="@id/nav_fragment_utility_bills_confirm"
+                app:popUpTo="@id/nav_fragment_services" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_utility_bills_confirm"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.utilityBills.confirm.UtilityBillConfirmFragment"
+            android:label="fragment_service_utility_bill_confirm"
+            tools:layout="@layout/fragment_transfer_confirm">
+
+            <action
+                android:id="@+id/action_nav_fragment_utility_bills_confirm_to_nav_fragment_transfer_end"
+                app:destination="@id/nav_fragment_transfer_end"
+                app:popUpTo="@id/nav_fragment_services" />
+
+            <argument
+                android:name="transferConfirm"
+                app:argType="tl.bnctl.banking.data.billpayments.model.BillPaymentApproveNumerousRequest" />
+
+            <argument
+                android:name="redirectToAccountId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_utility_bills_history"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.utilityBills.history.UtilityBillHistoryFragment"
+            android:label="UtilityBillHistoryFragment"
+            tools:layout="@layout/fragment_transfer_history" />
+
+        <fragment
+            android:id="@+id/nav_fragment_cash_withdrawal"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.cashWithdrawal.CashWithdrawalFragment"
+            android:label="fragment_cash_withdrawal"
+            tools:layout="@layout/fragment_cash_withdrawal">
+
+            <action
+                android:id="@+id/action_nav_fragment_cash_withdrawal_to_nav_fragment_cash_withdrawal_end"
+                app:destination="@id/nav_fragment_cash_withdrawal_end"
+                app:popUpTo="@id/nav_fragment_services" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_cash_withdrawal_end"
+            android:name="tl.bnctl.banking.ui.banking.fragments.services.cashWithdrawal.CashWithdrawalEndFragment"
+            android:label="CashWithdrawalEndFragment"
+            tools:layout="@layout/fragment_transfer_end">
+
+            <action
+                android:id="@+id/action_nav_fragment_cash_withdrawal_end_to_nav_fragment_services"
+                app:destination="@id/nav_fragment_services"
+                app:popUpTo="@id/nav_fragment_services" />
+
+            <argument
+                android:name="transferEnd"
+                app:argType="tl.bnctl.banking.data.transfers.model.TransferEnd" />
+
+            <argument
+                android:name="redirectToAccountId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+
+            <argument
+                android:name="showTransferEndSubMessage"
+                android:defaultValue="true"
+                app:argType="boolean" />
+
+        </fragment>
+
+    </navigation>
+
+    <navigation
+        android:id="@+id/nav_graph_information"
+        app:startDestination="@id/nav_fragment_information">
+
+        <fragment
+            android:id="@+id/nav_fragment_information"
+            android:name="tl.bnctl.banking.ui.banking.fragments.information.InformationFragment"
+            tools:layout="@layout/fragment_information">
+
+            <action
+                android:id="@+id/action_nav_fragment_information_to_nav_fragment_exchange_rates"
+                app:destination="@+id/nav_fragment_exchange_rates" />
+            <action
+                android:id="@+id/action_nav_fragment_information_to_nav_fragment_offices_and_atms"
+                app:destination="@id/nav_fragment_offices_and_atms" />
+            <action
+                android:id="@+id/action_nav_fragment_information_to_nav_fragment_settings"
+                app:destination="@id/nav_fragment_settings" />
+            <action
+                android:id="@+id/action_nav_fragment_information_to_nav_fragment_change_customer"
+                app:destination="@id/nav_fragment_change_client" />
+            <action
+                android:id="@+id/action_nav_fragment_information_to_nav_fragment_templates"
+                app:destination="@id/common_templates_navigation">
+                <argument
+                    android:name="directToTransferCreation"
+                    app:argType="boolean" />
+            </action>
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_change_client"
+            android:name="tl.bnctl.banking.ui.banking.fragments.information.changeCustomer.ChangeCustomerFragment"
+            tools:layout="@layout/fragment_change_customer" />
+
+        <fragment
+            android:id="@+id/nav_fragment_settings"
+            android:name="tl.bnctl.banking.ui.banking.fragments.information.settings.SettingsFragment"
+            tools:layout="@layout/fragment_settings">
+            <action
+                android:id="@+id/action_nav_fragment_settings_to_nav_fragment_languages"
+                app:destination="@id/nav_fragment_change_language" />
+            <action
+                android:id="@+id/action_nav_fragment_settings_to_nav_fragment_change_username"
+                app:destination="@id/nav_fragment_settings_change_username" />
+            <action
+                android:id="@+id/action_nav_fragment_settings_to_nav_fragment_change_password"
+                app:destination="@id/nav_fragment_settings_change_password" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_change_language"
+            android:name="tl.bnctl.banking.ui.banking.fragments.information.settings.changeLanguage.ChangeLanguageFragment"
+            tools:layout="@layout/fragment_change_language" />
+
+        <fragment
+            android:id="@+id/nav_fragment_exchange_rates"
+            android:name="tl.bnctl.banking.ui.banking.fragments.information.exchangeRates.ExchangeRatesFragment"
+            tools:layout="@layout/fragment_exchange_rates" />
+
+        <fragment
+            android:id="@+id/nav_fragment_offices_and_atms"
+            android:name="tl.bnctl.banking.ui.banking.fragments.information.officesAndATMs.OfficesAndATMsFragment"
+            android:label="fragment_offices_and_atms"
+            tools:layout="@layout/fragment_offices_and_atms">
+
+            <action
+                android:id="@+id/action_nav_fragment_offices_and_atms_to_nav_fragment_offices_and_atms_map"
+                app:destination="@id/nav_fragment_offices_and_atms_map" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_offices_and_atms_map"
+            android:name="tl.bnctl.banking.ui.banking.fragments.information.officesAndATMs.OfficesAndAtmsMapFragment"
+            android:label="fragment_offices_map"
+            tools:layout="@layout/fragment_offices_and_atms_map">
+
+            <argument
+                android:name="showOffices"
+                android:defaultValue="true"
+                app:argType="boolean" />
+
+        </fragment>
+        <include app:graph="@navigation/common_templates_navigation" />
+
+    </navigation>
+
+    <navigation
+        android:id="@+id/nav_graph_cards"
+        app:startDestination="@id/nav_fragment_cards">
+
+        <fragment
+            android:id="@+id/nav_fragment_card_details"
+            android:name="tl.bnctl.banking.ui.banking.fragments.cards.CardDetailsFragment"
+            android:label="fragment_card_transaction_history"
+            tools:layout="@layout/fragment_card_details">
+
+            <argument
+                android:name="card"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.cards.model.Card"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_cards"
+            android:name="tl.bnctl.banking.ui.banking.fragments.cards.CardsFragment"
+            tools:layout="@layout/fragment_cards">
+
+            <action
+                android:id="@+id/action_nav_fragment_cards_to_nav_fragment_card_details"
+                app:destination="@id/nav_fragment_card_details"
+                app:popUpTo="@id/nav_fragment_cards" />
+
+            <action
+                android:id="@+id/action_nav_fragment_cards_to_nav_fragment_card_transaction_history"
+                app:destination="@id/nav_fragment_card_transaction_history" />
+
+            <action
+                android:id="@+id/action_nav_fragment_cards_to_nav_fragment_new_debit_card"
+                app:destination="@id/nav_fragment_new_debit_card"
+                app:popUpTo="@id/nav_fragment_cards" />
+            <action
+                android:id="@+id/action_nav_fragment_cards_to_nav_fragment_credit_card_statement"
+                app:destination="@id/nav_fragment_credit_card_statement"
+                app:popUpTo="@id/nav_fragment_cards" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_card_transaction_history"
+            android:name="tl.bnctl.banking.ui.banking.fragments.cards.transaction_history.CardTransactionHistoryFragment"
+            android:label="fragment_card_transaction_history"
+            tools:layout="@layout/fragment_transfer_history">
+
+            <argument
+                android:name="card"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.cards.model.Card"
+                app:nullable="true" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_new_debit_card_success"
+            android:name="tl.bnctl.banking.ui.banking.fragments.cards.new_debit_card.NewDebitCardSuccessFragment"
+            android:label="fragment_new_debit_card_success"
+            tools:layout="@layout/fragment_new_debit_card_success">
+
+            <action
+                android:id="@+id/nav_fragment_new_debit_card_success_to_nav_fragment_cards"
+                app:destination="@id/nav_fragment_cards"
+                app:popUpTo="@id/nav_fragment_cards" />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_new_debit_card"
+            android:name="tl.bnctl.banking.ui.banking.fragments.cards.new_debit_card.NewDebitCardFragment"
+            android:label="fragment_new_debit_card"
+            tools:layout="@layout/fragment_new_debit_card">
+
+            <action
+                android:id="@+id/nav_fragment_new_debit_card_to_nav_fragment_new_debit_card_success"
+                app:destination="@id/nav_fragment_new_debit_card_success"
+                app:popUpTo="@id/nav_fragment_cards" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/nav_fragment_credit_card_statement"
+            android:name="tl.bnctl.banking.ui.banking.fragments.cards.credit_card_statement.CreditCardStatementFragment"
+            android:label="CreditCardStatementFragment"
+            tools:layout="@layout/fragment_credit_card_statement">
+            <argument
+                android:name="card"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.cards.model.Card"
+                app:nullable="true" />
+        </fragment>
+
+    </navigation>
+
+    <fragment
+        android:id="@+id/nav_fragment_create_template"
+        android:name="tl.bnctl.banking.ui.banking.fragments.transfers.templates.create.CreateTemplateFragment"
+        tools:layout="@layout/fragment_template_create" />
+
+    <fragment
+        android:id="@+id/nav_fragment_template_edit"
+        android:name="tl.bnctl.banking.ui.banking.fragments.transfers.templates.edit.EditTemplateFragment"
+        tools:layout="@layout/fragment_template_edit">
+        <argument
+            android:name="template"
+            android:defaultValue="@null"
+            app:argType="tl.bnctl.banking.data.templates.model.Template"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_fragment_template_details"
+        android:name="tl.bnctl.banking.ui.banking.fragments.transfers.templates.details.TemplateDetailsFragment"
+        tools:layout="@layout/fragment_template_details">
+        <argument
+            android:name="template"
+            android:defaultValue="@null"
+            app:argType="tl.bnctl.banking.data.templates.model.Template"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_nav_fragment_template_details_to_nav_fragment_internal_transfer"
+            app:destination="@id/nav_fragment_internal_transfer">
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+        </action>
+        <action
+            android:id="@+id/action_nav_fragment_template_details_to_nav_fragment_template_edit"
+            app:destination="@id/nav_fragment_template_edit" />
+
+        <action
+            android:id="@+id/action_nav_fragment_template_details_to_nav_fragment_iban_transfer"
+            app:destination="@id/nav_fragment_iban_transfer" />
+
+        <action
+            android:id="@+id/action_nav_fragment_template_details_to_nav_fragment_transfer_between_own_accounts"
+            app:destination="@id/nav_fragment_transfer_between_own_accounts" />
+
+        <action
+            android:id="@+id/action_nav_fragment_template_details_to_nav_fragment_currency_exchange"
+            app:destination="@id/nav_fragment_currency_exchange" />
+
+    </fragment>
+    <!-- Global actions and their fragments -->
+    <include app:graph="@navigation/common_news_navigation" />
+
+    <action
+        android:id="@+id/action_global_nav_fragment_news"
+        app:destination="@id/common_news_navigation" />
+
+    <fragment
+        android:id="@+id/nav_fragment_select_account_list"
+        android:name="tl.bnctl.banking.ui.banking.fragments.transfers.create.sections.account.list.SelectAccountListFragment"
+        android:label="fragment_select_account_list"
+        tools:layout="@layout/fragment_select_account_list">
+
+        <argument
+            android:name="accounts"
+            app:argType="tl.bnctl.banking.data.accounts.model.Account[]" />
+
+        <argument
+            android:name="resultKey"
+            app:argType="string" />
+
+        <argument
+            android:name="fragmentTitle"
+            app:argType="integer" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_fragment_select_account_list"
+        app:destination="@id/nav_fragment_select_account_list" />
+
+    <fragment
+        android:id="@+id/nav_fragment_statements_filter"
+        android:name="tl.bnctl.banking.ui.banking.fragments.statements.filter.StatementsFilterFragment"
+        android:label="StatementsFilterFragment"
+        tools:layout="@layout/fragment_statements_filter">
+
+        <argument
+            android:name="filter"
+            android:defaultValue="@null"
+            app:argType="tl.bnctl.banking.ui.banking.fragments.statements.adapter.StatementsFilterData"
+            app:nullable="true" />
+
+        <argument
+            android:name="resultKey"
+            app:argType="string" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_fragment_statements_filter"
+        app:destination="@id/nav_fragment_statements_filter" />
+
+    <fragment
+        android:id="@+id/nav_fragment_statements_details"
+        android:name="tl.bnctl.banking.ui.banking.fragments.statements.details.StatementsDetailsFragment"
+        android:label="fragment_statements_details"
+        tools:layout="@layout/fragment_statements_details">
+        <argument
+            android:name="selectedItem"
+            app:argType="tl.bnctl.banking.data.accounts.model.StatementsDataHolder" />
+        <argument
+            android:name="titleResourceId"
+            app:argType="integer" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_fragment_statements_details"
+        app:destination="@id/nav_fragment_statements_details" />
+
+    <fragment
+        android:id="@+id/nav_fragment_settings_change_password"
+        android:name="tl.bnctl.banking.ui.banking.fragments.settings.changePassword.ChangePasswordFragment"
+        android:label="fragment_settings_change_password">
+
+        <argument
+            android:name="oldUsername"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="oldPassword"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="usernameChanged"
+            android:defaultValue="true"
+            app:argType="boolean"
+            app:nullable="false" />
+        <argument
+            android:name="requireCurrentPassword"
+            android:defaultValue="true"
+            app:argType="boolean"
+            app:nullable="false" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_fragment_change_password"
+        app:destination="@id/nav_fragment_settings_change_password" />
+
+    <fragment
+        android:id="@+id/nav_fragment_settings_change_username"
+        android:name="tl.bnctl.banking.ui.banking.fragments.settings.changeUsername.ChangeUsernameFragment"
+        android:label="fragment_settings_change_username">
+
+        <argument
+            android:name="oldUsername"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="showCurrentUsername"
+            android:defaultValue="true"
+            app:argType="boolean"
+            app:nullable="false" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_fragment_change_username"
+        app:destination="@id/nav_fragment_settings_change_username" />
+
+    <action
+        android:id="@+id/global_nav_fragment_transfer_history"
+        app:destination="@id/nav_fragment_transfer_history"
+        app:popUpTo="@id/nav_fragment_transfers" />
+
+</navigation>

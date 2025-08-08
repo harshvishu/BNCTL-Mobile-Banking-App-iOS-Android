@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            style="@style/toolbar_title"
+            android:text="@string/news_title_message" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linear_layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/news_preview_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/banking_pic"
+                app:layout_constraintBottom_toTopOf="@id/news_text_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/news_text_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/fragment_padding"
+                app:layout_constraintTop_toBottomOf="@id/news_preview_img">
+
+                <TextView
+                    android:id="@+id/news_preview_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/fragment_padding"
+                    android:paddingBottom="@dimen/fragment_padding"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_heading"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/news_preview_img"
+                    tools:text="Lorem ipsum!" />
+
+                <TextView
+                    android:id="@+id/news_preview_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintTop_toBottomOf="@id/news_preview_title"
+                    tools:text="Until April 19, 2021, shop in online stores for at least BGN 69 with your debit or credit card Mastercard from Bank and you can win one of the great prizes: 2 x Electric scooter 2 x Drone 2 x Smart watch 1 x Segway How to participate: 1. Shop with your Mastercard debit or credit card in Online stores for at least BGN 69. 2. Register the data from your purchase and don't forget to save it in order to provide it in case you are one of the winners. Every registered purchase that meets the conditions gives you a chance for one of the great smart prizes!" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

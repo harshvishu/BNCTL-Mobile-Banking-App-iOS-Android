@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:orientation="vertical"
+    tools:context=".ui.banking.fragments.dashboard.DashboardFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@drawable/logo" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/loading_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/fragment_padding">
+
+            <TextView
+                android:id="@+id/accounts_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_views_margin_horizontal_short"
+                android:layout_marginBottom="@dimen/fragment_views_margin_vertical"
+                android:text="@string/dashboard_title_accounts"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="@dimen/text_size_small" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/accounts_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_views_margin_bottom"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/list_item_fragment_dashboard_account" />
+
+            <!--        <TextView-->
+            <!--            android:id="@+id/fragment_dashboard_title_cards"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginBottom="@dimen/fragment_views_margin_bottom"-->
+            <!--            android:textAlignment="center"-->
+            <!--            android:textSize="@dimen/text_size_heading"-->
+            <!--            android:text="@string/banking_activity_fragment_dashboard_title_cards" />-->
+
+            <!--        <View-->
+            <!--            android:id="@+id/fragment_dashboard_list_cards"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="1000dp"-->
+            <!--            android:background="@color/blue_grey_200"/>-->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

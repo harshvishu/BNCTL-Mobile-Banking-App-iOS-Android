@@ -1,0 +1,568 @@
+/*
+  Localizable.strings
+  Allianz (iOS)
+  
+  Created by Evgeniy Raev on 13.09.21.
+  
+  English Translations
+ */
+
+"name" = "Allianz Bank Bulgaria";
+
+/* App update */
+"update_minor %@" = "There is new version available %@";
+"update_minor_open_appstore" = "View in AppStore";
+"update_minor_later" = "Later";
+"update_force_main" = "App update is nessesary";
+"update_force_open_appstore" = "View in AppStore";
+
+/* Navigation */
+"nav_dashboard" = "Dashboard";
+"nav_transfers" = "Transfers";
+"nav_cards" = "Cards";
+"nav_services" = "Services";
+"nav_information" = "Information";
+
+/* Onboarding - Login */
+"login_title" = "Login";
+"login_placeholder_username" = "Username";
+"login_placeholder_password" = "Password";
+"login_button_sign_in" = "Login";
+"login_label_news" = "News";
+"login_label_contacts" = "Contacts";
+"login_label_branches" = "Branches";
+"login_label_info" = "Info";
+"login_button_forgot_password" = "Forgot Password?";
+"login_dialog_forgot_password_title" = "Please visit an office convenient for you to update your access password.\nFor more information contact us on 0700 13 014";
+"login_dialog_forgot_password_message" = "You have to go to a barnch of the bank and change your password";
+"changeLanguage" = "BG";
+"choose_language" = "Choose Language";
+
+/* Terms And Conditions */
+"tearms_title" = "Terms And Conditions";
+"temrms_text" = "Allianz Bank Mobile is a specialized application for mobile phones with Android and iOS operating systems, through which account holders or persons authorized by them who are registered users of Allianz E-bank can perform banking operations and receive reference information.
+
+Login to the application is carried out through a valid combination of username and password and successful authentication of the user's identity using the methods approved by the bank.
+Allianz Bank Mobile provides users with the following functionalities:
+
+• Reference information:
+    - about availability and movements on accounts and deposits;
+    - about registered payment cards – type, status, validity and performed operations;
+    - about ordered transfers of funds;
+    - about exchange rates;
+    - about the location of bank offices and ATMs
+• Payment services:
+    - transfers between accounts of the holder;
+    - intrabank transfers in local and foreign currency;
+    - interbank transfers in local currency;
+    - payments of utility bills and insurance premiums;
+• Other banking operations:
+    - confirmation of transfer orders created in Allianz E-bank;
+    - request a new debit card;
+    - cash withdrawal request;
+    - buying and selling of currency;
+
+All conditions and rules for the use of the application are agreed between the parties with the user registration documents for Allianz E-bank.";
+"terms_checkbox" = "I have read and I agree with the Terms and Conditions";
+"terms_close_button" = "I agree with the Terms";
+
+/* Information */
+"information_title" = "Information";
+"information_device" = "About this device";
+"information_app" = "About this app";
+"information_device_title" = "About this device";
+"information_device_model" = "System model:";
+"information_device_os" = "Operation system";
+"information_app_title" = "About this app";
+"information_app_appliaction" = "Application";
+"information_app_version %@" = "Version: %@";
+
+/* Contacts */
+"contacts_title" = "Contacts";
+"contacts_swift %@" = "SWIFT Code (BIC): %@";
+"contacts_contact" = "Contacts:";
+"contacts_social" = "Follow us:";
+
+/* Banking */
+
+/* Banking - Dashboard */
+"dashboard_title_accounts" = "Accounts";
+"dashboard_title_cards" = "Cards";
+"dashboard_accounts_label_balance" = "Balance:";
+"dashboard_label_loading" = "Loading your accounts...";
+"dashboard_label_no_accounts" = "No accounts found.";
+
+/* Banking - Dashboard - Account Details */
+"account_details_title" = "Account";
+"account_details_label_available_balance" = "Available balance";
+"account_details_label_blocked_amount" = "Blocked amount";
+"account_details_label_current_balance" = "Current balance";
+"account_details_label_no_transactions_for_given_period" = "No transactions for given period";
+"account_details_label_opening_balance" = "Opening balance";
+"account_details_label_overdraft" = "Overdraft";
+"account_details_label_loading_statements" = "Loading account transactions...";
+"account_details_button_balances" = "Balances";
+"account_details_dialog_balances_title" = "Account balances";
+
+/* Banking - Dashboard - Account Details - Additional Details */
+"account_additional_details_title" = "Account Details";
+"account_additional_details_label_beneficiary" = "Beneficiary";
+"account_additional_details_label_account_number" = "Account Number";
+"account_additional_details_label_bic" = "BIC";
+"account_additional_details_label_account_type" = "Type Account";
+"account_additional_details_label_currency" = "Currency";
+
+/* Banking - Dashboard - Account Details - Statements */
+"statements_label" = "Period:";
+
+/* Statements */
+"statements_filter_title" = "Filter";
+"statements_filter_label_period" = "Time frame";
+"statements_filter_button_filter" = "Apply Filters";
+"statements_filter_label_start_date" = "Start Date";
+"statements_filter_label_end_date" = "End Date";
+
+/* Statements Details */
+
+"statements_details_title" = "Transaction Details";
+"statements_details_label_to_account" = "To";
+"statements_details_label_from_account" = "From";
+"statements_details_label_reason" = "Reason";
+"statements_details_label_additional_reason" = "Additional details";
+"statements_details_label_provider" = "Provider";
+"statements_details_label_to_beneficiary" = "To";
+"statements_details_label_from_beneficiary" = "From";
+
+"statements_details_status_label_deleted" = "Deleted";
+"statements_details_status_label_unsigned" = "Unsigned";
+"statements_details_status_label_signed" = "Signed";
+"statements_details_status_label_uploaded" = "Uploaded";
+"statements_details_status_label_posted" = "Posted";
+"statements_details_status_label_canceled" = "Canceled";
+"statements_details_status_label_error" = "Error";
+"statements_details_status_label_rejected" = "Rejected";
+"statements_details_status_label_paid" = "Paid";
+"statements_details_status_label_pending" = "Pending";
+"statements_details_status_label_completed" = "Completed";
+
+/* Banking - Transfers */
+
+"transfers_title" = "Transfers";
+"transfers_button_between_accounts" = "Between my accounts";
+"transfers_button_national" = "To National IBAN";
+"transfers_button_internal" = "Internal currency transfers";
+"transfers_button_pending" = "Waiting transfers";
+"transfers_button_templates" = "Transfer templates";
+"transfers_button_history" = "Document history";
+
+"transfer_type_betweenacc" = "Between own accounts";
+"transfer_type_intrabank" = "Intrabank";
+"transfer_type_intrabank_currency" = "Intrabank in currency";
+"transfer_type_interbank" = "To National IBAN";
+"transfer_type_currency_exchange" = "Foreign currency exchange";
+
+/* Banking - Transfers - Create Screen */
+"transfer_form_placeholder_beneficiary_name" = "Beneficiary Name";
+"transfer_form_placeholder_iban" = "IBAN";
+"transfer_form_placeholder_amount" = "Amount";
+"transfer_form_placeholder_reason" = "Reason";
+"transfer_form_placeholder_additional_reason" = "Additional details";
+"transfer_form_label_settlement_type" = "Type";
+"transfer_form_label_details" = "Details";
+"transfer_form_label_to" = "To";
+"transfer_form_label_from" = "From";
+
+"transfers_label_type_standard" = "Standard";
+"transfers_label_type_rings" = "RINGS";
+"transfers_note_over_standard_limit" = "Note: For amounts above 100000 BGN the transfer is automatically forwarded to RINGS payment system";
+
+"transfer_select_account_list_label_text" = "Choose from your accounts";
+"transfer_end_of_day" = "The banking system is currently carrying out a procedure for closing the accounting day, and for this reason the transaction may take up to several hours to process. Press \"OK\" if you wish to sign the document.";
+
+/* Banking - Transfers - Summary */
+"transfer_summary_title" = "Summary";
+"transfer_summary_label_amount" = "Amount";
+"transfer_summary_label_from" = "From";
+"transfer_summary_label_to" = "To";
+"transfer_summary_label_reason" = "Reason";
+"transfer_summary_label_additional_reason" = "Additional details";
+"transfer_summary_button_confirm_payment" = "Confirm";
+
+/* Banking - Transfers - End */
+"transfer_end_button_done" = "Done";
+"transfer_end_success_title" = "The document was sent to the bank successfully";
+"transfer_end_success_message" = "Please follow its processing in the Documents History menu";
+
+/* Banking - Transfers - Pending */
+"transfer_pending_label_loading" = "Loading pending transfers...";
+"transfer_pending_label_header_pending_approval" = "Pending approval";
+"transfer_pending_label_select_all" = "Select all";
+"transfer_pending_label_no_pending_transfers" = "No pending transfers";
+"transfer_pending_label_card_beneficiary" = "Beneficiary";
+"transfer_pending_label_card_reason" = "Reason";
+"transfer_pending_label_card_additional_reason" = "Additional Reason";
+"transfer_pending_label_card_additional_reason %lld" = "Reason(%lld)";
+"transfer_pending_label_card_from_account" = "From account";
+"transfer_pending_label_card_to_account" = "To account";
+"transfer_pending_label_card_documents" = "Documents";
+"transfer_pending_button_reject" = "Reject";
+"transfer_pending_button_confirm" = "Confirm";
+"transfer_reject_title_confirm_payment" = "Confirm rejection of your payment";
+"transfer_reject_payment_message" = "Open your Token Application of The Bank and confirm rejection of this transaction";
+"transfer_reject_payment_success" = "Payment Rejection Confirmed";
+
+/* Banking - Transfers - Templates */
+"templates_title" = "Templates";
+"templates_label_loading" = "Loading templates...";
+"templates_label_no_data" = "No available templates";
+
+/* Banking - Transfer History */
+
+"transfers_history_title" = "Documents history";
+"transfers_history_no_items" = "No payment orders found for the selected period";
+"transfers_history_label_loading" = "Loading documents history...";
+
+/* Banking - Cards */
+
+/* Banking - Cards - Dashboard */
+"cards_label_loading" = "Loading information about your cards..."; // iOS only
+"cards_label_available_amount" = "Available Balance:";
+"cards_label_blocked_amount" = "Blocked amount:";
+"cards_label_credit_amount" = "Credit limit:";
+"card_action_lock" = "Lock";
+"card_action_details" = "Card details";
+"card_action_notifications" = "Notifications";
+"card_details_title" = "Card Details";
+"cards_label_status" = "Status";
+"cards_label_card_number" = "Card number";
+"cards_label_card_holder" = "Card holder";
+"cards_label_card_owner" = "Card owner";
+"cards_label_valid_thru" = "Valid thru";
+"cards_label_linked_to" = "Linked to";
+"cards_label_currency" = "Currency";
+"cards_label_card_type" = "Type of card";
+"cards_label_availability" = "Availability";
+"cards_label_approved_overdraft" = "Approved overdraft";
+"cards_label_credit_limit" = "Credit limit";
+"cards_error_loading_card_transaction_history" = "Error loading card transaction history";
+"cards_debit_card" = "Debit card";
+"cards_credit_card" = "Credit card";
+"cards_label_no_cards_registered" = "No cards registered";
+"card_status_new" = "New";
+"card_status_active" = "Active";
+"card_status_blocked" = "Blocked";
+"card_status_deactivated" = "Deactivated";
+"card_status_produced_not_received" = "Produced, not received";
+"card_status_unknown" = "Unknown";
+
+/* Banking - Cards - Card Transaction history */
+"card_transaction_history_title" = "Card transaction history";
+"card_transaction_history_no_items" = "No operations found for the period.";
+"card_transaction_history_label_loading" = "Loading card transaction history...";
+"card_transaction_history" = "Card transaction history";
+
+/* Banking - Cards - Credit card statements */
+"cards_action_credit_card_statements" = "Credit card statements";
+"error_loading_credit_card_statements" = "There was an error while trying to load your credit card statements. Please try again later";
+"credit_cards_statements_title %@" = "Statements for card %@";
+"credit_cards_statements_label_no_items" = "No statements found for the selected period.";
+"credit_card_statement_download_button_text" = "Download";
+"credit_card_statement_downloading_file_complete" = "Credit card statement successfully downloaded";
+"error_downloading_credit_card_statement" = "Error downloading card statement. Please try again later";
+"error_downloading_credit_card_statement_label" = "Error";
+"error_downloading_credit_card_statement_label_close" = "Dismiss";
+"error_downloading_credit_card_statement_file_already_exists" = "File already exists";
+
+/* Banking - Cards - New Debit Card */
+"new_debit_card_title" = "New debit card";
+"new_debit_card_linked_to_title" = "Linked to";
+"new_debit_card_linked_to_picker_label" = "Choose an account";
+"new_debit_card_label_linked_to_account" = "Linked to account";
+"new_debit_card_label_card_type" = "Card type";
+"new_debit_card_label_name_and_statements" = "Name on card and statements";
+"new_debit_card_label_name_description" = "Your name, as you would like to see printed on the card up to 21 characters:";
+"new_debit_card_placeholder_emboss_name" = "Name in Latin letters";
+"new_debit_card_placeholder_pickup_location" = "Pick up location";
+"new_debit_card_label_monthly_statements_location" = "I would like to receive monthly statements:";
+"new_debit_card_statements_location_radio_option_at_branch" = "Upon request at a bank branch";
+"new_debit_card_statements_location_radio_option_by_email" = "At the following e-mail address:";
+"new_debit_card_placeholder_email_for_statements" = "Email address for statements";
+"new_debit_card_text_terms" = "With this statement, I declare that all information provided on this form is true and correct, and that I have read, understood, and accept the Allianz Bank Debit Card User Agreement as primary authority in regulating the customer relationship between myself and Allianz Bank Bulgaria.";
+"new_debit_card_button_confirm" = "Confirm";
+"new_debit_card_label_processing_request" = "Processing your request...";
+"new_debit_card_error_enter_name" = "Please, enter name";
+"new_debit_card_error_enter_name_latin_only" = "Please use latin characters only";
+"new_debit_card_error_enter_name_character_limit" = "Name contains more than 21 characters";
+"new_debit_card_error_select_account" = "Please select account";
+"new_debit_card_error_select_card_type" = "Please select card type";
+"new_debit_card_error_select_location" = "Please select pickup location";
+"new_debit_card_error_please_agree_to_terms" = "Please agree to the terms and conditions";
+"new_debit_card_error_invalid_email" = "Please enter valid email";
+"new_debit_card_error_unknown" = "Error while trying to request new debit card. Please try again later";
+"new_debit_card_success_title" = "Successful debit card request";
+"new_debit_card_success_button_ok" = "OK";
+"error_loading_card_products" = "Error loading card products. Please try again later";
+
+/* Banking - Information */
+
+/* Banking - Information Dashboard */
+"information_button_news" = "News";
+"information_button_offices_and_atms" = "Offices and ATMs";
+"information_button_exchange_rates" = "Exchange rates";
+"information_button_switch_user" = "Change customer";
+"information_button_settings" = "Settings";
+"information_button_logout" = "Log Out";
+"information_logout_dialog_text" = "Are you sure you want to log out?";
+"information_logout_dialog_confirmation_text" = "Log Out";
+
+/* Banking - Information - Branches and ATMs */
+"offices_and_atms_title" = "Offices and ATMs";
+"offices_and_atms_button_offices" = "Offices";
+"offices_and_atms_button_atms" = "ATMs";
+"offices_and_atms_offices_title" = "Offices";
+"offices_and_atms_offices_label_loading" = "Loading Offices...";
+"offices_and_atms_atms_title" = "ATMs";
+"offices_and_atms_atms_label_loading" = "Loading Branches...";
+
+/* Banking - Information Dashboard */
+"news_title" = "News";
+"news_title_message" = "Message";
+
+/* Banking - Information - Exchange Rates */
+"exchange_rates_title" = "Exchange rates";
+"exchange_rates_label_currency" = "Currency";
+"exchange_rates_label_cash" = "Cash";
+"exchange_rates_label_cashless" = "Cashless";
+"exchange_rates_label_date" = "Date";
+"exchange_rates_label_sell" = "Sell";
+"exchange_rates_label_buy" = "Buy";
+"exchange_rates_label_no_exchange_rates_for_given_date" = "No exchange rates for given date";
+"exchange_rates_fixed_rate" = "(fixed rate)";
+"exchange_rates_label_select_currency" = "Select currency";
+
+/* Information - Change customer */
+"change_customer_title" = "Change customer";
+"change_customer_dialog_message" = "Are you sure that you want to change customer?";
+"change_customer_dialog_confirm" = "Yes";
+"change_customer_dialog_reject" = "Cancel";
+
+/* Banking - Services */
+
+/* Banking - Services Dashboard */
+"services_button_utility_bills" = "Utility bills";
+"services_button_insurance" = "Insurance";
+"services_button_cash_withdrawal" = "Cash withdrawal";
+"services_button_foreign_currency_exchange" = "Foreign currency exchange";
+"services_button_request_new_card" = "Request new debit card";
+
+/* Banking - Services - Utility Bills */
+"utility_bills_title" = "Utility bills";
+"utility_bills_label_loading" = "Loading information about your bills...";
+"utility_bills_history_label_loading" = "Loading your bills history...";
+"utility_bills_label_no_unpaid_utility_bills" = "No utility bills registrations are found.";
+"utility_bills_label_title" = "Utility bills";
+"utility_bills_check_box_label_select_all" = "Select all";
+"utility_bills_label_provider" = "Provider";
+"utility_bills_label_subscription_number" = "Subscription number";
+"utility_bills_paid" = "No outstanding invoices";
+"utility_bills_button_pay" = "Pay";
+"utility_bills_end_of_day" = "Dear clients, currently payments can not be executed due to running end-of-day procedure. Please try again later. Thank you for your understanding";
+"error_utility_bills_checking_amount_due" = "Error checking amount due";
+"error_utility_bills_checking_general_error" = "General Error";
+
+"utility_bills_summary_title" = "Summary";
+"utility_bills_summary_label_amount" = "Amount";
+"utility_bills_summary_label_from" = "From";
+"utility_bills_summary_label_select_source_account" = "Pay From";
+"utility_bills_summary_select_source_account_picker_title" = "Pay From";
+"utility_bills_summary_button_confirm_payment" = "Confirm";
+"utility_bills_history_title" = "Utility bills History";
+
+/* Banking - Services - Insurances */
+"insurances_title" = "Insurances";
+"insurances_label_loading" = "Loading insurances...";
+"insurances_label_no_insurances" = "No records found";
+"insurance_list_item_label_amount" = "Amount";
+"insurance_list_item_label_amount_bgn" = "Amount BGN";
+"insurance_list_item_label_date" = "Date";
+"insurance_list_item_label_policy_num" = "Policy number";
+"insurance_list_item_label_insurer" = "Insurer";
+"insurance_list_item_label_account" = "Account";
+"insurance_list_item_label_account_bgn" = "Account BGN";
+"insurance_list_item_label_installment_number" = "Installment number";
+"insurance_message_no_insurances" = "No records found";
+"insurance_button_pay" = "Pay";
+
+/* Banking - Services - Insurances Payment */
+"insurance_payment_title" = "Insurance payment";
+"insurance_payment_label_select_source_account" = "Pay From";
+"insurance_payment_select_source_account_picker_title" = "Pay From";
+"insurance_payment_label_amount" = "Amount";
+"insurance_payment_label_from" = "From";
+"insurance_payment_button_confirm" = "Confirm";
+
+/* Banking - Services - Cash Withdrawal */
+"cash_withdrawal_title" = "Cash withdrawal";
+"cash_withdrawal_form_placeholder_location" = "Withdrawal location";
+"cash_withdrawal_form_placeholder_amount" = "Amount";
+"cash_withdrawal_form_placeholder_date" = "Date";
+"cash_withdrawal_form_placeholder_description" = "Description";
+"cash_withdrawal_button_next" = "Next";
+
+/* Banking - Services - Currency Exchange*/
+"currency_exchange_form_placeholder_preferential_rates_pin" = "PIN for preferential rates";
+"currency_exchange_form_label_operation_type" = "Operation type";
+"currency_exchange_label_type_sell" = "Sell";
+"currency_exchange_label_type_buy" = "Buy";
+
+"transfer.title.intrabank" = "Iternal currency payment";
+"transfer.title.interbank" = "To National IBAN";
+"transfer.title.betweenacc" = "Bettween Own Accounts";
+"transfer.title.international" = "International";
+
+/* Common stuff */
+
+"common_label_loading" = "Loading..."; // iOS Only
+"common_label_currency" = "Currency";
+"common_button_next" = "Next";
+"select_account_list_label_select_account" = "Choose from your accounts:";
+"select_account_list_label_balance" = "Balance"; // Not used in iOS, kept for consistency
+"common_confirm_message" = "Yes";
+"common_reject_message" = "No";
+
+/* Operation Flows */
+"operation_common_success_label_title" = "Success";
+"operation_common_success_label_message" = "Operation successful";
+"operation_common_rejected_label_title" = "Rejected";
+"operation_common_rejected_label_message" = "Operation was rejected";
+"operation_common_cancelled_label_title" = "Cancelled";
+"operation_common_cancelled_label_message" = "Operation was cancelled";
+"operation_common_failed_label_title" = "Failed";
+"operation_common_failed_label_message" = "Operation failed";
+/* Operation Flows - Generic Waiting Simple */
+"operation_common_waiting_simple_label_title" = "Loading...";
+"operation_common_waiting_simple_label_message" = "Your request is being processed, please wait";
+/* Operation Flows - Generic Waiting SCA */
+"operation_common_waiting_sca_label_title" = "Confirm this operation";
+"operation_common_waiting_sca_label_message" = "Open your Allianz Bank Bulgaria SmartID and confirm this operation";
+
+/* Operation Flows - Specific - Login */
+"operation_login_waiting_sca_label_title" = "Confirm your login";
+"operation_login_waiting_sca_label_message" = "Use Allianz SmartID application to authorize the login.";
+/* Operation Flows - Specific - Transfer */
+"operation_transfer_waiting_sca_label_title" = "Confirm your transaction";
+"operation_transfer_waiting_sca_label_message" = "Open your Allianz Bank Bulgaria SmartID and confirm your transaction";
+"operation_transfer_success_label_title" = "The document was sent to the bank successfully";
+"operation_transfer_success_label_message" = "Please follow its processing in the Documents History menu";
+"operation_transfer_rejected_label_title" = "Rejected";
+"operation_transfer_rejected_label_message" = "The operation was rejected in SmartID";
+"operation_transfer_cancelled_label_title" = "Cancelled";
+"operation_transfer_cancelled_label_message" = "The transaction was cancelled";
+"operation_transfer_failed_label_title" = "Failed";
+"operation_transfer_failed_label_message" = "The transaction failed";
+"operation_transfer_failed_duplicated_transaction_label_title" = "Failed";
+"operation_transfer_failed_duplicated_transaction_label_message" = "Duplicated payment";
+"operation_transfer_failed_insufficient_funds_label_title" = "Failed";
+"operation_transfer_failed_insufficient_funds_label_message" = "Source Account does not have sufficient funds";
+
+/* Confrim OTP dialog */
+"operation_common_confirmation_title" = "There is no connection to SmartID. You can use SMS code instead.";
+"operation_common_confirmation_accept" = "Use SMS";
+"operation_common_confirmation_decline" = "Cancel";
+
+"operation_login_confirmation_title" = "There is no connection to SmartID. You can use SMS code instead.";
+"operation_login_confirmation_accept" = "Use SMS";
+"operation_login_confirmation_decline" = "Cancel";
+
+"operation_transfer_confirmation_title" = "There is no connection to SmartID. You can use SMS code instead.";
+"operation_transfer_confirmation_accept" = "Use SMS";
+"operation_transfer_confirmation_decline" = "Cancel";
+
+/* OTP screen */
+"operation_common_otp_title" = "Confirm via SMS code";
+"operation_common_wrong_otp" = "The Code you entered is not correct one";
+"operation_transfer_otp_title" = "Confirm transfer via SMS code";
+"operation_transfer_wrong_otp" = "The Code you entered is not correct one";
+
+/* OTP dialog */
+"operation_common_otp_title" = "Confirm via SMS code";
+"operation_common_otp_message" = "Enter the 6-digit verification code received via SMS to your phone:";
+
+"operation_common_otp_pin_title" = "Confirm via SMS code and PIN";
+"operation_common_otp_pin_message" = "Enter the 6-digit SMS code and your SmartID PIN for verification:";
+
+"operation_common_otp_code" = "Verification Code";
+"operation_common_otp_pin" = "SmartID PIN";
+"operation_common_otp_confirm" = "Confirm";
+
+"operation_login_otp_title" = "Log in via SMS code";
+"operation_login_otp_message" = "Enter the 6-digit verification code received via SMS to your phone:";
+
+"operation_login_otp_pin_title" = "Log in via SMS code and PIN";
+"operation_login_otp_pin_message" = "Enter the 6-digit SMS code and your SmartID PIN for verification:";
+
+"operation_login_otp_code" = "Verification Code";
+"operation_login_otp_pin" = "SmartID PIN";
+"operation_login_otp_confirm" = "Confirm";
+
+"operation_transfer_otp_title" = "Confirm transfer via SMS code";
+"operation_transfer_otp_message" = "Enter the 6-digit verification code received via SMS to your phone:";
+
+"operation_transfer_otp_pin_title" = "Confirm transfer via SMS code and SmartID PIN";
+"operation_transfer_otp_pin_message" = "Enter the 6-digit SMS code and your SmartID PIN for verification:";
+
+"operation_transfer_otp_code" = "Verification Code";
+"operation_transfer_otp_pin" = "SmartID PIN";
+"operation_transfer_otp_confirm" = "Confirm";
+
+/* outcome */
+"operation_outcome_button_done" = "Done";
+
+/* Settings */
+"settings_title" = "Settings";
+"settings_label_languages" = "Language";
+
+/* Language */
+"language_title" = "Language";
+"language_EN" = "English";
+"language_BG" = "Български";
+"language_dialog_message" = "Are you sure that you want to change language?";
+"language_dialog_confirm" = "Yes";
+"language_dialog_reject" = "Cancel";
+
+/* Errors */
+"error_no_connection" = "No Internet connection available. Please check your Wi-Fi or Mobile data settings.";
+"error_authentication_login" = "Authentication Error";
+"error_authentication_invalid_credentials_login" = "Authentication Error: Invalid username or password";
+"error_authentication_invalid_username_login" = "Authentication Error: Invalid username or password";
+"error_authentication_invalid_password_login" = "Authentication Error: Invalid username or password";
+"error_authentication_sca_cancelled_login" = "Authentication Error: Allianz SmartID Authentication cancelled";
+"error_authentication_sca_expired_login" = "Authentication Error: Allianz SmartID authentication expired";
+"error_authentication_sca_error_login" = "Authentication Error: Allianz SmartID Error";
+"error_authentication_no_fallback" = "Authentication Error: Allianz SmartID Error";
+"error_authentication_invalid_mobile_number_error_login" = "Authentication Error: You are registered with another mobile number in electronic banking. Please make a new registration through SmartID.";
+"error_loading_accounts" = "There was error while trying to load your accounts. Please try again later.";
+
+"error_cash_withdrawal_date" = "Notice of at least two working days is required.";
+
+"common_error_field_required" = "This field is required";
+
+"error_transfer_validation_source_account_missing" = "Source account is required";
+"error_transfer_validation_invalid_iban" = "Invalid Iban";
+"error_transfer_validation_same_source_and_destination" = "IBAN cannot be identical to the selected source account. Please choose another IBAN.";
+"error_transfer_validation_invalid_bulgarian_iban" = "Invalid Bulgarian Iban";
+"error_transfer_validation_required_beneficiary" = "Beneficiary is required";
+"error_transfer_validation_required_reason" = "Reason is required";
+"error_transfer_validation_reason_invalid_characters %@" = "Invalid characters %@";
+"error_transfer_validation_amount_greater_than_zero" = "Amount must be grater than 0";
+"error_transfer_validation_insufficient_funds" = "Insufficient Funds";
+"error_transfer_validation_same_currency" = "Source and Destination Accounnts must be the same currency";
+"error_transfer_interbank_wrong_transfer_system" = "Invalid RINGS payment system. When creating transfers in the bank system RINGS is not used.";
+"error_currency_transfer_validation_same_currency" = "Accounnts cannot be the same currency";
+"error_transfer_alert_close" = "Close";
+"error_transfer_alert_ok" = "OK";
+"error_transfer_alert_cancel" = "Cancel";
+
+"error_transfer_validation_preferential_rates_pin_length" = "The pin must be less than or equal to 10 symbols";
+"error_transfer_not_selected_approve" = "Please select at least one transfer to approve";
+"error_transfer_not_selected_reject" = "Please select at least one transfer to reject";

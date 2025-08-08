@@ -1,0 +1,15 @@
+//
+//  qa.xcconfig
+//  MobileBanking
+//
+//  Created by Evgeniy Raev on 14.02.23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "base.xcconfig"
+
+BASE_URL = http:/$()/192.168.132.220:8005/api/
+APP_NAME = Allianz Bank Mobile QA
+UPDATE_URL = itms-beta:/$()/

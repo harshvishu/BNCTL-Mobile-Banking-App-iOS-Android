@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Android Material needed colors -->
+  <color name="primaryColor">#0D30A6</color>
+  <color name="primaryLightColor">#0A7AC7</color>
+  <color name="primaryDarkColor">#003781</color>
+  <color name="secondaryColor">#0D30A6</color>
+  <color name="secondaryLightColor">#0A7AC7</color>
+  <color name="secondaryDarkColor">#003781</color>
+  <color name="textColorOnPrimary">#ffffff</color>
+  <color name="textColorOnSecondary">#ffffff</color>
+
+  <!-- App-specific common colors -->
+
+  <color name="app_background_color">#ffffff</color>
+  <color name="text_color_primary">#000000</color>
+  <color name="text_color_secondary">#999999</color>
+  <color name="text_color_card_pan">#ffffff</color>
+
+    <color name="red">#d96767</color>
+    <color name="green">#34c063</color>
+
+    <color name="activity_background">#F7F7F9</color>
+    <color name="fragment_background">#F7F7F9</color>
+    <color name="fragment_background_focus">#FFFFFF</color>
+    <color name="list_item_background">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="hint_text_color">#B2B2B2</color>
+
+    <color name="grey_main">#999999</color>
+    <color name="text_label_color">@color/grey_main</color>
+
+    <color name="transparent_base_white">#00FFFFFF</color>
+    <color name="transparent_base_black">#00000000</color>
+    <color name="view_pager_indicator_dot_selected">#003781</color>
+    <color name="view_pager_indicator_dot_default">#c9c9c9</color>
+    <color name="outline">#13a1d4</color>
+
+    <!-- App-specific exception colors -->
+
+    <color name="fragment_account_details_accent_color">#DFEFF2</color>
+
+    <color name="text_color_grey">#7e7e7e</color>
+
+  <color name="splash_screen_background">#ffffff</color>
+
+    <color name="rippleEffectColor">#F6F6F6</color>
+
+</resources>

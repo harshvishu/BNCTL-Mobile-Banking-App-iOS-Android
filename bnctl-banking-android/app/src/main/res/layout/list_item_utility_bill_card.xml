@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+    android:layout_marginEnd="@dimen/fragment_views_margin_horizontal"
+    android:layout_marginBottom="@dimen/fragment_views_margin_bottom"
+    android:background="@color/list_item_background"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="@dimen/fragment_padding">
+
+        <CheckBox
+            android:id="@+id/utility_bill_custom_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+            android:enabled="false"
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            tools:text="Utility Bill Name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/utility_bill_label_provider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/utility_bills_label_provider"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/utility_bill_label_subscription_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/utility_bills_label_subscription_number"
+                    android:textSize="@dimen/text_size_small" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/utility_bill_provider_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/text_size_smaller"
+                    android:textStyle="bold"
+                    tools:text="EnergoPro" />
+
+                <TextView
+                    android:id="@+id/utility_bill_subscription_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/text_size_smaller"
+                    android:textStyle="bold"
+                    tools:text="110992877" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/utility_bill_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/utility_bill_currency"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="50.45" />
+
+            <TextView
+                android:id="@+id/utility_bill_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/utility_bill_amount"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/fragment_views_margin_horizontal_tiny"
+                android:textSize="@dimen/text_size_tiny"
+                tools:text="BGN" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

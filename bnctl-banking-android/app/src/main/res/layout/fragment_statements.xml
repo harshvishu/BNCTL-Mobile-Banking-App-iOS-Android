@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fragment_padding">
+
+        <LinearLayout
+            android:id="@+id/fragment_statements_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_large"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragment_statements_filter_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/statements_label"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_statements_filter_range"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+                android:layout_weight="3"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="14.05.2021 - 16.09.2021" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fragment_statements_filter_button"
+                style="@style/rounded_material_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:icon="@drawable/ic_calendar_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_statements_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_statements_filter"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_item_statement" />
+
+        <TextView
+            android:id="@+id/fragment_statements_no_items_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_statements_recycler_view"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="@dimen/fragment_views_margin_bottom_large"
+            android:text="@string/transfers_history_no_items"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_secondary"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

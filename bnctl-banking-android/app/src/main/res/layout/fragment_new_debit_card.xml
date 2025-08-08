@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:clipToPadding="true"
+    android:orientation="vertical"
+    tools:context=".ui.banking.fragments.cards.new_debit_card.NewDebitCardFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:menu="@menu/toolbar_menu_close">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/toolbar_title"
+            android:text="@string/new_debit_card_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/loading_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="visible" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layout_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/fragment_padding">
+
+            <TextView
+                android:id="@+id/new_debit_card_source_account_label"
+                style="@style/card_view_title_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="@string/new_debit_card_label_linked_to_account" />
+
+            <androidx.cardview.widget.CardView
+                style="@style/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_medium">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/fragment_padding">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/new_debit_card_source_account_image"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                        android:layout_marginEnd="@dimen/fragment_views_margin_horizontal"
+                        android:background="@drawable/outline_common"
+                        android:src="@drawable/ic_account"
+                        app:contentPadding="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/rounded_image_view"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+                        android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/button_edit_source_account"
+                        app:layout_constraintStart_toEndOf="@id/new_debit_card_source_account_image"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/source_account_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textStyle="bold"
+                            tools:text="Current Account" />
+
+                        <TextView
+                            android:id="@+id/source_account_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_normal"
+                            tools:text="BG11BNBG97451028545673" />
+
+                        <TextView
+                            android:id="@+id/source_account_balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/fragment_views_margin_vertical"
+                            android:textStyle="bold"
+                            tools:text="Balance: 2000.50 BGN" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/button_edit_source_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:backgroundTint="@android:color/transparent"
+                        android:padding="@dimen/image_button_padding"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_edit"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/new_debit_card_card_type_label"
+                style="@style/card_view_title_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                android:text="@string/new_debit_card_label_card_type" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/new_debit_card_card_type_card_view"
+                style="@style/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_medium"
+                android:paddingTop="@dimen/view_padding_medium"
+                android:paddingBottom="@dimen/view_padding_medium">
+
+                <RadioGroup
+                    android:id="@+id/new_debit_card_product_types"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:minHeight="48dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/new_debit_card_name_and_statements_label"
+                style="@style/card_view_title_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                android:text="@string/new_debit_card_label_name_and_statements" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/new_debit_card_name_and_statements_card_view"
+                style="@style/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_medium"
+                android:paddingStart="@dimen/view_padding_medium"
+                android:paddingTop="@dimen/view_padding_medium"
+                android:paddingEnd="@dimen/view_padding_medium"
+                android:paddingBottom="@dimen/view_padding_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/view_padding_medium"
+                    android:paddingEnd="@dimen/view_padding_medium">
+
+                    <TextView
+                        android:id="@+id/new_debit_card_name_description"
+                        style="@style/card_view_title_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                        android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                        android:layout_weight="1"
+                        android:text="@string/new_debit_card_label_name_description" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                        android:layout_weight="1"
+                        android:hint="@string/new_debit_card_placeholder_emboss_name"
+                        app:boxBackgroundColor="@android:color/transparent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/new_debit_card_emboss_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:maxLength="21"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="1dp"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/text_size_normal"
+                            tools:text="Lola Scumpy" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/new_debit_card_pickup_location_wrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/new_debit_card_pickup_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/fragment_views_margin_vertical"
+                            android:layout_weight="1"
+                            android:minHeight="48dp"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="1dp"
+                            tools:listitem="@layout/item_simple_id_name_spinner_item" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/new_debit_card_statements_label"
+                        style="@style/card_view_title_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                        android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                        android:layout_weight="1"
+                        android:text="@string/new_debit_card_label_monthly_statements_location" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_statements_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/fragment_views_margin_vertical"
+                        android:clipToPadding="false"
+                        android:paddingStart="1dp"
+                        android:paddingEnd="1dp">
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/receive_statement_at_branch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="1dp"
+                            android:text="@string/new_debit_card_statement_location_radio_option_at_branch" />
+
+                        <RadioButton
+                            android:id="@+id/receive_statement_by_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="1dp"
+                            android:text="@string/new_debit_card_statement_location_radio_option_by_email" />
+
+                    </RadioGroup>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                        android:layout_weight="1"
+                        android:hint="@string/new_debit_card_placeholder_email_for_statements"
+                        app:boxBackgroundColor="@android:color/transparent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/new_debit_card_statements_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                            android:inputType="textEmailAddress"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="1dp"
+                            tools:text="pop@armenia.com" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <CheckBox
+                android:id="@+id/new_debit_card_agree_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_padding_medium"
+                android:text="@string/new_debit_card_text_terms" />
+
+            <Button
+                android:id="@+id/new_debit_card_confirm_button"
+                style="@style/bottom_action_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_debit_card_button_confirm" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

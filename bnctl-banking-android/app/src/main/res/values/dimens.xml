@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_padding">16dp</dimen> <!-- Global Fragment padding -->
+    <dimen name="fragment_views_margin_bottom">24dp
+    </dimen> <!-- Margin used when laying out views one above another. Used mainly in Onboarding Activity fragments. -->
+    <dimen name="fragment_views_margin_horizontal">16dp</dimen>
+    <dimen name="fragment_views_margin_horizontal_tiny">4dp</dimen>
+    <dimen name="fragment_views_margin_horizontal_short">8dp</dimen>
+    <dimen name="fragment_views_margin_horizontal_large">32dp</dimen>
+    <dimen name="fragment_views_margin_vertical">16dp</dimen>
+    <dimen name="fragment_views_margin_vertical_tiny">4dp</dimen>
+    <dimen name="fragment_views_margin_vertical_shorter">8dp</dimen>
+    <dimen name="fragment_views_margin_vertical_short">12dp</dimen>
+    <dimen name="fragment_views_margin_vertical_large">20dp</dimen>
+    <dimen name="fragment_views_margin_vertical_larger">28dp</dimen>
+    <dimen name="fragment_views_margin_vertical_huge">32dp</dimen>
+    <dimen name="fragment_views_margin_image_alignment">4dp</dimen>
+    <dimen name="fragment_views_margin_bottom_large">40dp</dimen>
+
+    <!-- Dialog dimensions -->
+    <dimen name="dialog_horizontal_margin">24dp</dimen>
+    <dimen name="dialog_vertical_margin">24dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_size_title">28sp</dimen>
+    <dimen name="text_size_heading">20sp</dimen>
+    <dimen name="text_size_sub_heading">18sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_paragraph">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_smaller">13sp</dimen>
+    <dimen name="text_size_tiny">12sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_larger">30sp</dimen>
+    <dimen name="text_size_huge">40sp</dimen>
+
+    <!-- Text Margins -->
+    <dimen name="text_label_margin_vertical">8dp</dimen>
+    <dimen name="text_margin_horizontal">4dp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="image_button_padding">10dp</dimen>
+    <dimen name="button_margin_horizontal">24dp</dimen>
+    <dimen name="button_margin_horizontal_large">40dp</dimen>
+    <dimen name="button_margin_horizontal_huge">80dp</dimen>
+
+    <!-- Specifics -->
+    <dimen name="account_select_dropdown_height">70dp</dimen>
+
+    <!-- Radius -->
+    <dimen name="card_corner_radius_medium">10dp</dimen>
+    <dimen name="card_corner_radius_large">15dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="view_padding_medium">20dp</dimen>
+    <dimen name="view_elevation_medium">10dp</dimen>
+    <dimen name="view_padding_tiny">5dp</dimen>
+
+</resources>

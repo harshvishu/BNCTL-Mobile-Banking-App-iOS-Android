@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.banking.fragments.services.utilityBills.UtilityBillFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:menu="@menu/toolbar_menu_history"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            style="@style/toolbar_title"
+            android:text="@string/utility_bills_label_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/loading_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/service_utility_bills_select_all_check_box_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fragment_padding">
+
+            <CheckBox
+                android:id="@+id/service_utility_bills_select_all_check_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+                android:layout_marginEnd="@dimen/fragment_views_margin_horizontal"
+                android:text="@string/utility_bills_check_box_label_select_all"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/service_utility_bills_pay"
+            android:layout_below="@id/service_utility_bills_select_all_check_box_card_view"
+            android:fillViewport="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/service_utility_bills_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_utility_bill_card" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/service_utility_bills_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/fragment_views_margin_bottom_large"
+            android:layout_marginVertical="@dimen/fragment_padding"
+            android:text="@string/utility_bills_button_pay"
+            android:textAllCaps="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

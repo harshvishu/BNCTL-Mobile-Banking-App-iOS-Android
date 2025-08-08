@@ -1,0 +1,15 @@
+//
+//  dev.xcconfig
+//  Allianz
+//
+//  Created by Prem's on 10/11/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "base.xcconfig"
+
+BASE_URL = http:/$()/192.168.133.120:8095/api/
+APP_NAME = BNCTL Dev
+APP_BUNDLE_ID = com.softwaregroup.banking.bnctl

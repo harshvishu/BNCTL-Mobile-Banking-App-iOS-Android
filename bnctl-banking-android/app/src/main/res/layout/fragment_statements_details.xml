@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.banking.fragments.statements.details.StatementsDetailsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_background_color"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/toolbar_title"
+            tools:text="Transaction Details" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/fragment_views_margin_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_views_margin_vertical_short"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fragment_statements_details_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size_huge"
+                android:textStyle="bold"
+                tools:text="200000" />
+
+            <TextView
+                android:id="@+id/fragment_statements_details_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_views_margin_horizontal_tiny"
+                android:textAlignment="textEnd"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="@dimen/text_size_huge"
+                tools:text="BGN" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_statements_details_beneficiary_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_views_margin_vertical_tiny"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/statements_details_label_to_beneficiary"
+                android:textAlignment="textStart"
+                android:textColor="@color/text_color_grey"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/fragment_statements_details_beneficiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_views_margin_vertical_tiny"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="EPay/epay.bg" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_statements_details_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_views_margin_vertical_larger"
+            android:gravity="center"
+            tools:text="11 Apr 2020, 19:09" />
+
+        <TextView
+            android:id="@+id/fragment_statements_details_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+            android:background="@drawable/ic_status_background"
+            android:paddingHorizontal="@dimen/fragment_views_margin_vertical"
+            android:paddingVertical="@dimen/fragment_views_margin_vertical_tiny"
+            android:textAlignment="center"
+            android:textColor="@color/primaryDarkColor"
+            android:textSize="@dimen/text_size_small"
+            tools:text="Completed" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/fragment_padding">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fragment_statements_details_provider_container"
+            style="@style/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/fragment_padding">
+
+                <TextView
+                    style="@style/statements_details_section_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/statements_details_label_provider" />
+
+                <TextView
+                    android:id="@+id/fragment_statements_details_provider_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="Eurosport" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fragment_statements_details_reason_container"
+            style="@style/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/fragment_padding">
+
+                <TextView
+                    android:id="@+id/fragment_statements_details_reason_label"
+                    style="@style/statements_details_section_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/statements_details_label_reason" />
+
+                <TextView
+                    android:id="@+id/fragment_statements_details_reason_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="MID#0000100 A1 SNO #0888398340" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fragment_statements_details_destination_container"
+            style="@style/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/fragment_padding">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/fragment_statements_details_to_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                    android:background="@drawable/outline_common"
+                    android:src="@drawable/ic_account"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_statements_details_to_label"
+                    app:shapeAppearanceOverlay="@style/rounded_image_view"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/fragment_statements_details_to_label"
+                    style="@style/statements_details_section_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/statements_details_label_to_account"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fragment_statements_details_to_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintBottom_toBottomOf="@id/fragment_statements_details_to_icon"
+                    app:layout_constraintStart_toEndOf="@id/fragment_statements_details_to_icon"
+                    app:layout_constraintTop_toTopOf="@id/fragment_statements_details_to_icon"
+                    tools:text="BG11BNBG97451028545673" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/fragment_padding">
+
+                <TextView
+                    android:id="@+id/fragment_statements_details_from_label"
+                    style="@style/statements_details_section_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/statements_details_label_from_account"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fragment_statements_details_from_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintBottom_toBottomOf="@id/fragment_statements_details_from_icon"
+                    app:layout_constraintStart_toEndOf="@id/fragment_statements_details_from_icon"
+                    app:layout_constraintTop_toTopOf="@id/fragment_statements_details_from_icon"
+                    tools:text="BG11BNBG97451028545673" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/fragment_statements_details_from_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                    android:layout_marginEnd="@dimen/fragment_views_margin_horizontal"
+                    android:background="@drawable/outline_common"
+                    android:src="@drawable/ic_account"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_statements_details_from_label"
+                    app:shapeAppearanceOverlay="@style/rounded_image_view"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fragment_statements_details_transfer_id_container"
+            style="@style/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/fragment_padding">
+
+                <TextView
+                    android:id="@+id/fragment_statements_details_transfer_id_label"
+                    style="@style/statements_details_section_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/statements_details_label_transfer_id" />
+
+                <TextView
+                    android:id="@+id/fragment_statements_details_transfer_id_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="FT22161X0731" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>

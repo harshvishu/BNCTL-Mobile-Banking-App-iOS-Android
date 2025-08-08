@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transfer_confirm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.banking.fragments.transfers.end.TransferEndFragment">
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fragment_padding">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/transfer_end_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical"
+            android:src="@drawable/ic_success"
+            app:layout_constraintBottom_toTopOf="@+id/transfer_end_central_horizontal_guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/transfer_end_central_horizontal_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/transfer_end_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fragment_views_margin_horizontal_large"
+            android:layout_marginEnd="@dimen/fragment_views_margin_horizontal_large"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/transfer_end_success_title"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_size_paragraph"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/transfer_end_central_horizontal_guideline" />
+
+        <TextView
+            android:id="@+id/transfer_end_sub_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fragment_views_margin_horizontal_large"
+            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+            android:layout_marginEnd="@dimen/fragment_views_margin_horizontal_large"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/transfer_end_success_message"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transfer_end_message" />
+
+        <Button
+            android:id="@+id/button_ok"
+            style="@style/bottom_action_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="@string/transfer_end_button_done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

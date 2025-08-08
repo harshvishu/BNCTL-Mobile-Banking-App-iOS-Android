@@ -1,0 +1,14 @@
+//
+//  localHost.xcconfig
+//  Allianz
+//
+//  Created by Prem's on 10/11/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+//BASE_URL = http:/$()/192.168.127.31:8005/api/
+//BASE_URL = http:/$()/10.0.16.25:8005/api/ - //Pepo VPN
+BASE_URL = http:/$()/localhost:8080/api/
+APP_NAME = Allianz Localhost

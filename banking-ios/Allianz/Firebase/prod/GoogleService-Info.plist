@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>332949911724-kq05kmsa46nd30vr21lnnffeuh27lror.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.332949911724-kq05kmsa46nd30vr21lnnffeuh27lror</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>332949911724-j1g7cp32vh15q0e6fi6i0qeo6sn7m254.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCeNSFCsHPMkTXoOCewmM2j2lJDXnUTQFM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>332949911724</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>bg.allianz.bank.mobilebanking</string>
+	<key>PROJECT_ID</key>
+	<string>allianz-mobile-banking-84b5b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>allianz-mobile-banking-84b5b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:332949911724:ios:67fd0005395f7ab6ec4709</string>
+</dict>
+</plist>

@@ -1,0 +1,15 @@
+//
+//  prod.xcconfig
+//  Allianz (iOS)
+//
+//  Created by Evgeniy Raev on 26.10.22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "base.xcconfig"
+
+BASE_URL = https:/$()/www.ibanking.bnctl.tl/
+APP_NAME = BNCTL Mobile Banking
+APP_BUNDLE_ID = tl.bnctl.banking

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/fragment_views_margin_bottom"
+    android:background="@color/list_item_background"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fragment_padding">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/account_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/fragment_views_margin_image_alignment"
+            android:background="@drawable/outline_common"
+            android:src="@drawable/ic_account"
+            app:contentPadding="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/rounded_image_view"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_size_normal"
+            app:layout_constraintBottom_toTopOf="@+id/account_account_number"
+            app:layout_constraintStart_toEndOf="@+id/account_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Current Account" />
+
+        <TextView
+            android:id="@+id/account_account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintBottom_toTopOf="@+id/label_balance"
+            app:layout_constraintStart_toStartOf="@+id/account_name"
+            app:layout_constraintTop_toBottomOf="@+id/account_name"
+            tools:text="BG80BNBG96611020345666" />
+
+        <TextView
+            android:id="@+id/label_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/dashboard_accounts_label_balance"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/account_balance"
+            app:layout_constraintStart_toStartOf="@+id/account_account_number"
+            app:layout_constraintTop_toBottomOf="@+id/account_account_number" />
+
+        <TextView
+            android:id="@+id/account_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/account_currency"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/label_balance"
+            app:layout_constraintTop_toTopOf="@+id/label_balance"
+            tools:text="15780.45" />
+
+        <TextView
+            android:id="@+id/account_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/account_balance"
+            app:layout_constraintTop_toTopOf="@+id/account_balance"
+            tools:text="USD" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

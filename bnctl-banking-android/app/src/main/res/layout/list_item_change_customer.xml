@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/language_menu_item_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/fragment_padding">
+
+    <TextView
+        android:id="@+id/customer_initials"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/outline_common"
+        android:padding="@dimen/image_button_padding"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/secondaryLightColor"
+        tools:text="ЖВ" />
+
+    <TextView
+        android:id="@+id/customer_full_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/fragment_views_margin_horizontal"
+        tools:text="Jack Daniels" />
+
+    <ImageView
+        android:id="@+id/customer_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check"/>
+
+</LinearLayout>

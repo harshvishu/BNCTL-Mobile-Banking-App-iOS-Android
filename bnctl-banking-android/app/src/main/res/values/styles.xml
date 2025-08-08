@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button.Black" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@android:color/black</item>
+    </style>
+    <!-- Rounded View Styles -->
+    <style name="rounded_image_view">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <!-- Used in Dashboard, Account Details and in Transfers -->
+    <style name="card_view">
+        <item name="cardCornerRadius">@dimen/card_corner_radius_medium</item>
+        <item name="cardElevation">0dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="fragment_list_item.with_arrow_right" parent="fragment_list_item">
+        <item name="android:drawableRight">@drawable/ic_arrow_forward</item>
+    </style>
+
+    <style name="fragment_list_item">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/text_color_primary</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <!-- When we need a round button inside the layouts -->
+    <style name="rounded_material_button" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="cornerFamily">rounded</item>
+        <!--        <item name="iconSize">16dp</item>-->
+        <item name="cornerRadius">20dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:padding">0dp</item>
+        <item name="iconPadding">0dp</item>
+    </style>
+
+    <style name="material_button" parent="Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <!--        <item name="iconSize">16dp</item>-->
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="iconTint">@color/primaryDarkColor</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:padding">0dp</item>
+        <item name="iconPadding">0dp</item>
+    </style>
+
+    <style name="ic_transfer_debit">
+        <item name="android:src">@drawable/ic_transfer_debit</item>
+        <item name="android:tint">@color/red</item>
+        <item name="android:background">@drawable/outline_transfer_debit</item>
+    </style>
+
+    <style name="ic_transfer_credit">
+        <item name="android:src">@drawable/ic_transfer_credit</item>
+        <item name="android:tint">@color/green</item>
+        <item name="android:background">@drawable/outline_transfer_credit</item>
+    </style>
+
+    <!-- Text Styles: Common -->
+    <style name="toolbar_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primaryDarkColor</item>
+        <item name="android:textSize">@dimen/text_size_heading</item>
+    </style>
+    <!-- Text Styles: Onboarding -->
+    <style name="text_title_onboarding">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="text_info_onboarding">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- Text Styles: Dashboard and Sub-Screens -->
+    <style name="account_additional_details_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/fragment_views_margin_vertical_shorter
+        </item>
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+        <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+
+    <style name="account_additional_details_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/fragment_views_margin_vertical_shorter</item>
+        <item name="android:layout_marginEnd">@dimen/fragment_views_margin_horizontal</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/text_color_primary</item>
+    </style>
+    <!-- Text Styles: Cards -->
+    <style name="card_embossed_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:textColor">@color/text_color_card_pan</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="card_embossed_text.large" parent="card_embossed_text">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="card_embossed_text.small" parent="card_embossed_text">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="card_details_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/fragment_views_margin_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/fragment_views_margin_vertical</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="card_details_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="form_fields_layout">
+        <item name="boxCollapsedPaddingTop">-12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="form_fields">
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="drop_down_menu" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <!--    This is the small text before the card views in the new debit card screen. TODO: Figure out a better name    -->
+    <style name="card_view_title">
+        <item name="android:textColor">@color/text_color_grey</item>
+    </style>
+
+    <style name="card_view_title_small" parent="card_view_title">
+        <item name="android:textSize">@dimen/text_size_smaller</item>
+    </style>
+
+    <style name="section_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/fragment_views_margin_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/fragment_views_margin_vertical_shorter
+        </item>
+        <item name="android:textColor">@color/text_color_grey</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">@dimen/fragment_padding</item>
+        <item name="android:layout_marginEnd">@dimen/fragment_padding</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="bottom_action_button">
+        <item name="android:layout_marginStart">@dimen/button_margin_horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/button_margin_horizontal</item>
+    </style>
+
+    <style name="statements_details_section_label">
+      <item name="android:layout_marginBottom">@dimen/fragment_views_margin_vertical_tiny</item>
+      <item name="android:textSize">@dimen/text_size_tiny</item>
+      <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+
+
+  <style name="dialog_button">
+    <item name="android:background">@color/transparent_base_white</item>
+    <item name="android:textColor">@color/primaryColor</item>
+  </style>
+
+  <style name="ModalBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet.Modal">
+    <item name="backgroundTint">@color/transparent_base_white</item>
+    <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
+  </style>
+
+  <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">24dp</item>
+  </style>
+</resources>

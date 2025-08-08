@@ -1,0 +1,12 @@
+//
+//  uat.xcconfig
+//  Allianz
+//
+//  Created by Evgeniy Raev on 23.11.21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = https:/$()/abbscat.bank.allianz.bg:9106/service/v1/ib/scWebank/api/
+APP_NAME = Allianz UAT

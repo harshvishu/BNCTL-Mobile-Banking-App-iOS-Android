@@ -1,0 +1,14 @@
+//
+//  base.xcconfig
+//  BNCTL
+//
+//  Created by Kavitha Sambandam on 13/02/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+#include "Shared/common.xcconfig"
+
+LOGIN_TIMEOUT = 360

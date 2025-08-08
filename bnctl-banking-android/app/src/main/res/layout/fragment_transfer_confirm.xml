@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transfer_confirm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_focus"
+    android:orientation="vertical"
+    tools:context=".ui.banking.fragments.transfers.confirm.TransferConfirmFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:menu="@menu/toolbar_menu_close">
+        <TextView
+            android:id="@+id/fragment_transfer_history_toolbar_title"
+            style="@style/toolbar_title"
+            android:text="@string/common_confirm_action" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fragment_padding"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <Button
+            android:id="@+id/transfer_confirm_confirm_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/common_button_submit"
+            android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+            android:layout_marginEnd="@dimen/fragment_views_margin_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transfer_confirm_otp_secret_layout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/transfer_confirm_message"
+            android:layout_width="379dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="@dimen/fragment_views_margin_horizontal_large"
+            android:paddingEnd="@dimen/fragment_views_margin_horizontal_large"
+            android:gravity="start|center_horizontal"
+            android:text="@string/transfer_confirm_payment_message"
+            android:textAlignment="viewStart"
+            app:layout_constraintBottom_toTopOf="@+id/transfer_confirm_otp_secret_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transfer_confirm_label" />
+
+        <TextView
+            android:id="@+id/transfer_confirm_label"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/transfer_confirm_title_confirm_payment"
+            android:textSize="@dimen/text_size_heading"
+            app:layout_constraintBottom_toTopOf="@+id/transfer_confirm_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_center_guideline" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontal_center_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="80dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/transfer_confirm_otp_secret_layout"
+            style="@style/form_fields_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+            android:layout_marginEnd="@dimen/fragment_views_margin_horizontal"
+            android:hint="@string/transfer_confirm_otp_code"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transfer_confirm_message">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/transfer_confirm_otp_secret"
+                style="@style/form_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="numberPassword"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="8008135" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

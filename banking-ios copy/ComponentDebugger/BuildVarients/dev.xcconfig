@@ -1,0 +1,12 @@
+//
+//  dev.xcconfig
+//  Allianz
+//
+//  Created by Prem's on 10/11/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = http:/$()/192.168.132.220:8005/api/
+APP_NAME = Allianz Dev

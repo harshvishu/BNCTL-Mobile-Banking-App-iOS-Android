@@ -1,0 +1,15 @@
+//
+//  prod.xcconfig
+//  Allianz (iOS)
+//
+//  Created by Evgeniy Raev on 26.10.22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "base.xcconfig"
+
+BASE_URL = https:/$()/abbscap.bank.allianz.bg:9443/service/v1/ib/scWebank/api/
+APP_NAME = Allianz Bank Bulgaria Mobile
+UPDATE_URL = itms-apps:/$()/itunes.apple.com/app/id1645505257

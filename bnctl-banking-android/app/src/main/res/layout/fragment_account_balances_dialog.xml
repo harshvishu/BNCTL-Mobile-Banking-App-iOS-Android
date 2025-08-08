@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/toolbar_menu_close">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/toolbar_title"
+            android:text="@string/account_details_dialog_balances_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!-- Balances -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="@dimen/fragment_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balances_dialog_header">
+
+            <!-- OPENING BALANCE -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/balances_dialog_opening_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/balances_dialog_opening_balance_label"
+                    style="@style/account_additional_details_label"
+                    android:text="@string/account_details_label_opening_balance"
+                    android:textSize="@dimen/text_size_tiny"
+                    app:layout_constraintBottom_toTopOf="@+id/balances_dialog_opening_balance_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/balances_dialog_opening_balance_amount"
+                    style="@style/account_additional_details_text"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/balances_dialog_opening_balance_label"
+                    tools:text="5600 BGN" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Current Balance -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/balances_dialog_current_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_views_margin_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/balances_dialog_opening_balance">
+
+                <TextView
+                    android:id="@+id/balances_dialog_current_balance_label"
+                    style="@style/account_additional_details_label"
+                    android:text="@string/account_details_label_current_balance"
+                    android:textSize="@dimen/text_size_tiny"
+                    app:layout_constraintBottom_toTopOf="@+id/balances_dialog_current_balance_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/balances_dialog_current_balance_amount"
+                    style="@style/account_additional_details_text"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/balances_dialog_current_balance_label"
+                    tools:text="2400 BGN" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Available balance -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/balances_dialog_available_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_views_margin_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/balances_dialog_current_balance">
+
+                <TextView
+                    android:id="@+id/balances_dialog_available_balance_label"
+                    style="@style/account_additional_details_label"
+                    android:text="@string/account_details_label_available_balance"
+                    android:textSize="@dimen/text_size_tiny"
+                    app:layout_constraintBottom_toTopOf="@+id/balances_dialog_available_balance_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/balances_dialog_available_balance_amount"
+                    style="@style/account_additional_details_text"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/balances_dialog_available_balance_label"
+                    tools:text="2300 BGN" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Overdraft balance -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/balances_dialog_overdraft_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_views_margin_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/balances_dialog_available_balance">
+
+                <TextView
+                    android:id="@+id/balances_dialog_overdraft_balance_label"
+                    style="@style/account_additional_details_label"
+                    android:text="@string/account_details_label_overdraft"
+                    android:textSize="@dimen/text_size_tiny"
+                    app:layout_constraintBottom_toTopOf="@+id/balances_dialog_overdraft_balance_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/balances_dialog_overdraft_balance_amount"
+                    style="@style/account_additional_details_text"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/balances_dialog_overdraft_balance_label"
+                    tools:text="0.00 BGN" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Blocked Amount -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/balances_dialog_blocked_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_views_margin_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/balances_dialog_overdraft_balance">
+
+                <TextView
+                    android:id="@+id/balances_dialog_blocked_amount_label"
+                    style="@style/account_additional_details_label"
+                    android:text="@string/account_details_label_blocked_amount"
+                    android:textSize="@dimen/text_size_tiny"
+                    app:layout_constraintBottom_toTopOf="@+id/balances_dialog_blocked_amount_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/balances_dialog_blocked_amount_amount"
+                    style="@style/account_additional_details_text"
+                    android:textSize="@dimen/text_size_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/balances_dialog_blocked_amount_label"
+                    tools:text="0.00 BGN" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

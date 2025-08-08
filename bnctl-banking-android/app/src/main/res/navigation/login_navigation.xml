@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/nav_fragment_login">
+
+    <fragment
+        android:id="@+id/nav_fragment_confirm_login"
+        android:name="tl.bnctl.banking.ui.onboarding.fragments.login.confirm.LoginConfirmFragment"
+        android:label="LoginConfirmFragment"
+        tools:layout="@layout/fragment_transfer_confirm">
+        <argument
+            android:name="username"
+            android:defaultValue="false"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            android:defaultValue="false"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fragment_login"
+        android:name="tl.bnctl.banking.ui.onboarding.fragments.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_nav_fragment_login_to_nav_fragment_confirm_login"
+            app:destination="@id/nav_fragment_confirm_login"
+            app:popUpTo="@id/nav_fragment_login" />
+
+        <action
+            android:id="@+id/action_nav_fragment_login_to_nav_fragment_offices_and_atms_map"
+            app:destination="@id/nav_fragment_offices_and_atms_map"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/action_nav_fragment_login_to_common_news_navigation"
+            app:destination="@id/common_news_navigation" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fragment_offices_and_atms_map"
+        android:name="tl.bnctl.banking.ui.banking.fragments.information.officesAndATMs.OfficesAndAtmsMapFragment"
+        android:label="fragment_offices_map"
+        tools:layout="@layout/fragment_offices_and_atms_map">
+
+        <argument
+            android:name="showOffices"
+            android:defaultValue="true"
+            app:argType="boolean" />
+
+    </fragment>
+
+    <include app:graph="@navigation/common_news_navigation" />
+</navigation>

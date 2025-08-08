@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_focus"
+    android:orientation="vertical"
+    app:flow_verticalAlign="center">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/toolbar_title"
+            android:text="@string/edit_payee_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fragment_views_margin_horizontal_large"
+        android:layout_marginEnd="@dimen/fragment_views_margin_horizontal_large"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <TextView
+            android:id="@+id/new_template_transfer_type_label"
+            style="@style/account_additional_details_label"
+            android:text="@string/template_details_label_transferType" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_template_transfer_type_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Spinner
+                android:id="@+id/new_template_transfer_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_views_margin_vertical"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+                tools:listitem="@layout/item_simple_id_name_spinner_item" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+            android:hint="@string/transfer_form_placeholder_beneficiary_name"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_template_payee_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="m@miskin.in" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+            android:hint="@string/transfer_form_placeholder_payee_email"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_template_payee_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="m@miskin.in" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+            android:hint="@string/transfer_form_placeholder_account_number"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_template_account_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="02100122279032" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/new_template_currency_label"
+            style="@style/account_additional_details_label"
+            android:text="@string/template_label_payee_currency" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_template_currency_layout"
+            style="@style/drop_down_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconDrawable="@drawable/ic_drop_down_arrow"
+            app:endIconMode="custom"
+            android:layout_gravity="end"
+            app:endIconTint="@color/primaryLightColor"
+            app:endIconTintMode="src_atop">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/new_template_currency"
+                android:layout_width="match_parent"
+                android:completionThreshold="0"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="none"
+                android:text="@string/common_label_currency"
+                android:textSize="@dimen/text_size_normal"
+                tools:ignore="LabelFor"
+                tools:text="BGN" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/new_template_next_button"
+        style="@style/bottom_action_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="@string/common_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

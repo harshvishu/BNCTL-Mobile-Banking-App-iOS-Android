@@ -1,0 +1,638 @@
+<resources>
+    <string name="app_name">BNCTL Mobile Banking</string>
+    <string name="app_code">mobileBanking</string>
+    <string name="toast_message_copied_to_clipboard">Copiado para a área de transferência</string>
+
+    <!-- region Navigation -->
+
+    <string name="nav_dashboard">Contas</string>
+    <string name="nav_transfers">Transferências</string>
+    <string name="nav_cards">Cartões</string>
+    <string name="nav_services">Pagamentos</string>
+    <string name="nav_information">Mais</string>
+
+    <!-- endregion -->
+
+    <!-- region Onboarding -->
+
+    <!-- Onboarding: Intro -->
+    <string name="intro_title">Intro</string>
+    <string name="intro_steps">1. Terms &amp; Conditions\n2. Log in with Internet Banking Credentials\n3. Phone number verification</string>
+
+    <!-- Onboarding: Terms and Conditions -->
+    <string name="terms_title">Terms and Conditions</string>
+    <string name="terms_text">
+<b>1. Objective :</b>
+        Provide guidelines regarding information management services for electronic transaction data in the form of Internet Banking and Mobile Banking.\n\n
+        <b>2. Main Guide:</b>\n\n
+        Mobile Banking usually abbreviated as m-Banking, is a transaction banking through mobile media is good in the form of an m-Banking application or mobile operator default application.\n\n
+        <b>3. Terms and Conditions</b>\n\n
+        \t•	After registering, customers can use the BNCTL bank\'s internet banking service to obtain information or make transactions.\n
+        \t•	Registered customers will receive a notification link along with a default "username and password" via the newly registered user\'s email.\n
+        \t•	When logging in for the first time to use the BNCTL bank internet banking service, the customer is required to change the default "username and password" received from a notification via the customer\'s email. After that, please change the “username and password” as specified by the customer.\n\n
+        \t•	Change the password with a character length “password” must be 8 digits and must be a combination of uppercase and lowercase letters, numbers and symbols (!@#%^&amp;*). Password example: @chapie #21.\n
+        \t•	For each transaction:\n
+            \t\t-	The customer must ensure the accuracy and completeness of transaction orders (including ensuring that all data required for transactions has been filled in completely and correctly). The Bank is not responsible for any impacts that may arise due to negligence, incompleteness, ambiguity or inaccuracy of orders/data from user customers.\n
+            \t\t-	If it is believed that the correctness and completeness of the data filled in, as a sign of approval for the implementation of the transaction, the customer user will receive an OTP (One-time password) notification via SMS to the customer\'s mobile number that was previously registered.\n\n
+        \t•	All transactions that have been notified by the bank and approved by the customer cannot be cancelled.\n
+        \t•	The Bank accepts and executes every order from the customer as a valid order based on the use of "username and password" and OTP notifications received by customers via SMS or email. And for this reason, the bank has no obligation to examine or investigate the authenticity or legitimacy or authority of the user "username and password" and OTP notifications or evaluate or prove the accuracy or completeness of orders. Therefore, the order is valid and binding on the customer as appropriate, unless the customer can prove otherwise.\n
+        \t•	Bank has the right not to carry out orders from user customers, if:\n
+            \t\t-	Insufficient bank account balance.\n
+            \t\t-	The intended beneficiary customer account number is no longer active (closed account).\n
+            \t\t-	The Bank knows or has reason to suspect that fraud or a crime has been or will be committed.\n
+            \t\t-	The bank legally knows that the user customer has a legal problem.\n
+        \t•	The customer agrees and acknowledges that:\n
+            \t\t -	By conducting transactions through the internet banking and mobile banking of the BNCTL bank, all instructions and communications from customers received by the bank will be treated as valid evidence even if written documents are not made and/or documents that are not signed are issued.\n
+            \t\t-	Evidence of orders from the customer to the bank and all forms of communication between the bank and the customer sent electronically stored in the bank\'s data center or stored in the form of information storage and other data at the bank, either in written form documents, notes, computer printouts or copies thereof , is a legal means of evidence whose validity, truth or authenticity cannot be denied.\n
+        \t•	The use of username, password and OTP by the customer has the same legal force as a written order signed by the user customer, therefore the user customer hereby declares that the username, password and OTP user, in every internet banking transaction order and mobile banking are also a power of attorney from a customer who uses the bank to carry out transactions including but not limited to debiting the customer\'s account either in the context of carrying out the ordered transaction or for payment of transaction fees that have been or will be determined later by the Bank. bank.\n
+        \t•	At the bank\'s own discretion, the bank has the right to change the transaction limit.\n\n
+        <b>4. Privacy and Security</b>\n\n
+        \t•	Banks and customers are not obliged to carry out any orders whether signed or not or to answer any questions received by unsecured e-mail. Customers are advised not to send confidential information via unsecured e-mails.\n
+        \t•	The bank has the right to stop BNCTL internet banking and mobile banking services temporarily or for a certain period determined by the bank for renewal, maintenance or other purposes for any reason that the bank deems good, and for that the bank is not obliged to account for it to anyone.\n
+        \t•	Do not use public Wi-fi connections when accessing internet banking and mobile banking applications, this is because wi-fi connections in public areas are not guaranteed security. In fact, it can make the data in it vulnerable to being hacked by intruders.\n
+        \t•	Always update the mobile banking application installed on the smartphone to ensure that the application is equipped with the latest security services.\n
+        \t•	Make sure to download the BNCTL mobile banking application only through official sources in the play store (for android based gadgets) and the app store (for iOS based gadgets) and not from unknown sources obtained from untrusted sources.\n
+        \t•	Username, Password and OTP are confidential codes and the authority to use them rests with the user customer. Username is permanent and cannot be changed again.\n
+        \t•	User customers must secure their username, password and OTP by:\n
+            \t\t-	Do not share your username, password and OTP to other people.\n
+            \t\t-	Do not record the username, password and OTP on paper or store it in writing on a cellphone or other storage facility that can be known by other people.\n
+            \t\t-	Be careful using your username, password and OTP so that others don\'t see it.\n
+            \t\t-	Change internet banking password regularly, at least once every three months.\n
+            \t\t-	Do not use passwords that are easy to guess, such as:\n
+            \t\t-	Twin / repeating numbers (11111111, 11223344, 10101010, and so on).\n
+            \t\t-	Use the date of birth of you or your significant other.\n
+            \t\t-	Make your Internet Banking password different from the pin you use in other apps.\n
+        \t•	In the event that the Customer knows or suspects that the Username, Password and OTP have been known by an unauthorized person, the User Customer must immediately take security measures by changing the Username and Password.\n
+        \t•	If for some reason the user customer cannot change his internet banking and mobile banking username and password, then the customer must notify the BNCTL bank. Prior to receipt of written notification by the authorized bank, all orders, transactions and communications based on the customer\'s username, password and OTP by unauthorized parties are the full responsibility of the customer user.\n
+        \t•	Any misuse of internet banking usernames, passwords and OTPs and BNCTL mobile banking is the responsibility of the customer. The Customer hereby releases the Bank from all claims that may arise, both from other parties and the User Customer himself as a result of misuse of Username, Password and OTP.\n
+    </string>
+    <string name="terms_button_agree">I agree</string>
+
+    <!-- Onboarding: Login -->
+    <string name="login_title_logo">Banco Nacional de Comércio de Timor Leste </string>
+    <string name="login_title">Use your Internet Banking credentials</string>
+    <string name="login_label_info">Use your Internet Banking credentials as an individual customer.</string>
+    <string name="login_placeholder_email">E-mail</string>
+    <string name="login_placeholder_username">Utilizador</string>
+    <string name="login_placeholder_password">Senha</string>
+    <string name="login_button_sign_in_or_register">Sign in or register</string>
+    <string name="login_button_sign_in">Entrada</string>
+    <string name="login_dialog_label_logging_you_in">Fazendo seu login, por favor aguarde</string>
+    <string name="login_label_forgot_password">Esqueceu a senha?</string>
+    <string name="login_label_contacts">Contatos</string>
+    <string name="login_label_branches">Agências do banco</string>
+    <string name="login_label_button_info">Info</string>
+    <string name="login_label_title_dialog_forgoten_password">Entre em contato com uma agência bancária</string>
+    <string name="login_label_text_forgoten_password">Você deve entrar em contato com uma agência do banco para alterar sua senha.</string>
+    <string name="login_label_button_forgoten_password">OK</string>
+    <string name="login_confirm_label">Confirme seu login</string>
+    <string name="login_confirm_message">Use your SmartID application to authorize the login.</string>
+
+    <!-- endregion -->
+
+    <!-- Banking -->
+    <string name="notifications_title">Notificações</string>
+    <string name="cards_title">Cartões</string>
+    <string name="services_title">Serviços</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title_accounts">Contas</string>
+    <string name="dashboard_title_cards">Cartões</string>
+    <string name="dashboard_accounts_label_balance">Saldo:</string>
+
+    <!-- region Dashboard & Details -->
+
+    <!-- Account Details -->
+    <string name="account_details_title">Conta</string>
+    <string name="account_details_label_available_balance">Saldo Disponível</string>
+    <string name="account_details_label_blocked_amount">Valor bloqueado</string>
+    <string name="account_details_label_current_balance">Saldo Contabilístico</string>
+    <string name="account_details_label_no_transactions_for_given_period">Nenhuma transação para determinado período</string>
+    <string name="account_details_label_opening_balance">Saldo inicial</string>
+    <string name="account_details_label_overdraft">Cheque especial</string>
+    <string name="account_details_button_balances">Saldos</string>
+    <string name="account_details_dialog_balances_title">Saldos de contas</string>
+    <string name="account_details_button_show_all_statements">Mostra tudo</string>
+
+    <!-- Account Additional Details -->
+    <string name="account_additional_details_title">Detalhes da conta</string>
+    <string name="account_additional_details_label_beneficiary">Beneficiário</string>
+    <string name="account_additional_details_label_account_number">Número de Conta</string>
+    <string name="account_additional_details_label_bic">BIC</string>
+    <string name="account_additional_details_label_account_type">Conta</string>
+    <string name="account_additional_details_label_currency">Moeda</string>
+
+    <!-- Statements -->
+    <string name="statements_label">Período:</string>
+    <string name="statements_range">%1$s - %2$s</string>
+
+    <!-- Account Statements -->
+    <string name="account_account_statements_title">Extracto de Conta</string>
+
+    <!-- endregion -->
+
+    <!-- Account Statement Filter -->
+    <string name="statements_filter_title">Pesquisar</string>
+    <string name="statements_filter_label_period">Prazo</string>
+    <string name="statements_filter_button_filter">Aplicar Filtros</string>
+    <string name="statements_filter_label_start_date">Data de início</string>
+    <string name="statements_filter_label_end_date">Data final</string>
+
+    <!-- endregion -->
+
+    <!-- Statement Details -->
+
+    <string name="statements_details_title">Detalhes da transação</string>
+    <string name="statements_details_label_to_account">Destino</string>
+    <string name="statements_details_label_from_account">Conta a debitar</string>
+    <string name="statements_details_label_reason">Descrição</string>
+    <string name="statements_details_label_provider">Entidades</string>
+    <string name="statements_details_label_to_beneficiary">Beneficiário</string>
+
+    <string name="statements_details_status_label_confirmed">Sucesso</string>
+    <string name="statements_details_status_label_success">Sucesso</string>
+    <string name="statements_details_status_label_scheduled">Agendado</string>
+    <string name="statements_details_status_label_pending">Pendente</string>
+    <string name="statements_details_status_label_processing">Em Processamento</string>
+    <string name="statements_details_status_label_reversed">Anulada</string>
+    <string name="statements_details_status_label_failed">Falhou</string>
+    <string name="statements_details_status_label_failure">Falhou</string>
+    <string name="statements_details_status_label_error">Erro</string>
+    <string name="statements_details_status_label_sent">Enviado</string>
+    <string name="statements_details_status_label_stored">Aceite</string>
+    <string name="statements_details_status_label_rejected">Rejeitada</string>
+    <string name="statements_details_status_label_cancelled">Cancelada</string>
+    <string name="statements_details_label_transfer_id">Referência</string>
+
+    <!-- endregion -->
+
+    <!-- region Transfers -->
+
+    <!-- Transfers -->
+    <string name="transfers_title">Transferências</string>
+    <string name="transfers_button_between_accounts">Entre minhas contas</string>
+    <string name="transfers_button_national">Nacional</string>
+    <string name="transfers_button_internal">Interno</string>
+    <string name="transfers_button_international">Internacional</string>
+    <string name="transfers_button_pending">Transferências Pendentes</string>
+    <string name="transfers_button_templates">Gestão de Beneficiários</string>
+    <string name="transfers_button_history">Transferências Executadas</string>
+    <string name="transfers_label_type_standard">Standard</string>
+    <string name="transfers_label_type_rings">RINGS</string>
+    <string name="transfers_fees">Fees:</string>
+    <string name="transfers_country_iban_prefix">TL</string> <!-- TODO Move this to settings -->
+
+    <string name="transfer_type_betweenacc">Entre minhas contas</string>
+    <string name="transfer_type_intrabank">Interno</string>
+    <string name="transfer_type_intrabank_currency">Same bank in currency</string>
+    <string name="transfer_type_interbank">Nacional</string>
+    <string name="transfer_type_international">Internacional</string>
+    <string name="transfer_type_currency_exchange">Foreign currency exchange</string>
+
+    <!-- Transfers: Create Form -->
+    <string name="transfer_form_placeholder_beneficiary_name">Nome</string>
+    <string name="transfer_form_placeholder_account_number">Conta</string>
+    <string name="transfer_form_placeholder_amount">Montante</string>
+    <string name="transfer_form_placeholder_reason">Descrição</string>
+    <string name="transfer_form_label_settlement_type">Tipo</string>
+    <string name="transfer_form_label_details">Detahles</string>
+    <string name="transfer_form_label_to">Destino</string>
+    <string name="transfer_form_label_from">Origem</string>
+    <string name="transfer_form_eod_started">The banking system is currently carrying out a procedure for closing the accounting day, and for this reason the transaction may take up to several hours to process. Press "OK" if you wish to sign the document.</string>
+
+    <!-- Transfers: Account Selection -->
+    <string name="transfer_select_account_list_label_text">Escolha entre suas contas</string>
+    <string name="transfer_select_account_balance_label">Saldo: %1$s %2$s</string>
+    <string name="transfer_select_account_select_select_account">Escolher a Conta</string>
+
+    <!-- Transfers: Summary -->
+    <string name="transfer_summary_title">Resumo de Transferência</string>
+    <string name="transfer_summary_label_amount">Montante</string>
+    <string name="transfer_summary_label_from">Origem</string>
+    <string name="transfer_summary_label_to">Destino</string>
+    <string name="transfer_summary_label_reason">Detalhes</string>
+    <string name="transfer_summary_label_account_balance">Saldo: %1$s %2$s</string>
+    <string name="transfer_summary_button_confirm_payment">Confirmar</string>
+    <string name="transfer_summary_label_fee">Valor da taxa</string>
+
+    <!-- Transfers: Confirm -->
+    <string name="transfer_confirm_title_confirm_payment">Confirme o pagamento</string>
+    <string name="transfer_confirm_payment_message">Para confirmar esta operação, digite o código de confirmação que enviamo
+s para o seu número de telefone ou endereço de e-mail registado.</string>
+    <string name="transfer_confirm_payment_success">Transacção aceite</string>
+
+    <!-- Transfers: End -->
+    <string name="transfer_end_button_done">Concluído</string>
+    <string name="transfer_end_success_title">Transacção aceite</string>
+    <string name="transfer_end_success_message">Transacção aceite.</string>
+    <string name="transfer_end_success_accepted">Your transfer with TX No. %1$s / %2$s has been accepted.</string>
+    <string name="transfer_end_success_stored">Your transfer with TX No. %1$s has been accepted.</string>
+    <string name="transfer_end_success_initiated">Your pending transfer with TX No. %1$s has been initiated.</string>
+
+    <!-- Transfers: Pending -->
+    <string name="transfer_pending_label_header_pending_approval">Pending approval</string>
+    <string name="transfer_pending_label_select_all">Select all</string>
+    <string name="transfer_pending_label_no_pending_transfers">No pending transfers</string>
+    <string name="transfer_pending_label_card_beneficiary">Benficiario</string>
+    <string name="transfer_pending_label_card_reason">Razão</string>
+    <string name="transfer_pending_label_card_from_account">Conta a debitar</string>
+    <string name="transfer_pending_label_card_to_account">To account</string>
+    <string name="transfer_pending_label_card_documents">Documents</string>
+    <string name="transfer_pending_button_reject">Rejeitar</string>
+    <string name="transfer_pending_button_confirm">Confirm</string>
+    <string name="transfer_reject_title_confirm_payment">Confirm rejection of your payment</string>
+    <string name="transfer_reject_payment_message">Open your Token Application of The Bank and confirm rejection of this transaction</string>
+    <string name="transfer_reject_payment_success">Payment Rejection Confirmed</string>
+
+    <!-- Transfer Templates -->
+    <string name="templates_title">Beneficiários</string>
+    <string name="templates_label_no_data">No available payees</string>
+
+    <!-- Transfer History -->
+    <string name="transfers_history_title">Outbound transfers</string>
+    <string name="transfers_history_no_items">No transactions found for the selected period</string>
+
+    <!-- endregion -->
+
+    <!-- region Cards -->
+
+    <!-- Cards - Cards -->
+    <string name="cards_available_amount_label">Available Balance:</string>
+    <string name="cards_credit_blocked_amount">Credit limit:</string>
+    <string name="cards_blocked_amount">Blocked amount:</string>
+    <string name="card_action_lock">Lock</string>
+    <string name="card_action_details">Card details</string>
+    <string name="card_action_notifications">Notificações</string>
+    <string name="card_details_title">Imagem</string>
+    <string name="cards_label_status">Estado</string>
+    <string name="cards_label_card_number">Número do cartão</string>
+    <string name="cards_label_card_holder">Card holder</string>
+    <string name="cards_label_card_owner">Card owner</string>
+    <string name="cards_label_valid_thru">Valid thru</string>
+    <string name="cards_label_linked_to">Linked to</string>
+    <string name="cards_label_currency">Currency</string>
+    <string name="cards_label_card_type">Type of card</string>
+    <string name="cards_label_availability">Availability</string>
+    <string name="cards_label_approved_overdraft">Approved overdraft</string>
+    <string name="cards_label_credit_limit">Credit limit</string>
+    <string name="cards_error_loading_card_transaction_history">Error loading card transaction history</string>
+    <string name="cards_debit_card">Débito</string>
+    <string name="cards_credit_card">Crédito</string>
+    <string name="cards_no_cards_registered">No cards Registered</string>
+    <string name="cards_status_active">Ativo</string>
+    <string name="card_status_blocked">Bloqueado</string>
+    <string name="card_status_deactivated">Deactivated</string>
+    <string name="card_status_produced_not_received">Produced, not received</string>
+    <string name="card_status_unknown">Unknown</string>
+    <string name="card_transaction_history_title">Card transaction history</string>
+    <string name="card_transaction_history">Card transaction history</string>
+    <!-- region Cards - Credit card statements -->
+    <string name="cards_action_credit_card_statements">Credit card statements</string>
+    <string name="error_loading_credit_card_statements">There was an error while trying to load your credit card statements. Please try again later</string>
+    <string name="credit_cards_statements_title">Statements for card %1$s</string>
+    <string name="credit_card_statement_download_button_text">Download</string>
+    <string name="credit_card_statement_downloading_file_complete">Credit card statement successfully downloaded</string>
+    <string name="error_downloading_credit_card_statement">Error downloading card statement. Please try again later</string>
+    <!-- The next two strings are shown in the app settings (for API >= 26) where the user can choose to enable or disable the notification channel -->
+    <string name="credit_card_statement_downloading_file_notification_channel_name">Credit card statement download progress</string>
+    <string name="credit_card_statement_downloading_file_notification_channel_description">Shows you the progress of downloading a card statement</string>
+    <string name="credit_card_statement_downloading_statement">Downloading credit card statement</string>
+    <string name="credit_card_statement_downloading_please_wait">Please wait until the download finishes…</string>
+    <!-- endregion -->
+    <!-- Cards - New Debit Card -->
+    <string name="new_debit_card_title">New debit card</string>
+    <string name="new_debit_card_linked_to_title">Linked to</string>
+    <string name="new_debit_card_label_linked_to_account">Linked to account</string>
+    <string name="new_debit_card_label_card_type">Tipo</string>
+    <string name="new_debit_card_label_name_and_statements">Name on card and statements</string>
+    <string name="new_debit_card_label_name_description">Your name, as you would like to see printed on the card up to 21 characters:</string>
+    <string name="new_debit_card_placeholder_emboss_name">Name in Latin letters</string>
+    <string name="new_debit_card_placeholder_pickup_location">Pick up location</string>
+    <string name="new_debit_card_label_monthly_statements_location">I would like to receive monthly statements:</string>
+    <string name="new_debit_card_statement_location_radio_option_at_branch">Upon request at a bank branch</string>
+    <string name="new_debit_card_statement_location_radio_option_by_email">At the following e-mail address:</string>
+    <string name="new_debit_card_placeholder_email_for_statements">Email address for statements</string>
+    <string name="new_debit_card_text_terms">With this statement, I declare that all information provided on this form is true and correct, and that I have read, understood, and accept the Allianz Bank Debit Card User Agreement as primary authority in regulating the customer relationship between myself and Allianz Bank Bulgaria.</string>
+    <string name="new_debit_card_button_confirm">Confirm</string>
+    <string name="new_debit_card_error_enter_name">Please, enter name</string>
+    <string name="new_debit_card_error_select_account">Please select account</string>
+    <string name="new_debit_card_error_select_card_type">Please select card type</string>
+    <string name="new_debit_card_error_select_location">Please select pickup location</string>
+    <string name="new_debit_card_error_please_agree_to_terms">Please agree to the terms and conditions</string>
+    <string name="new_debit_card_error_invalid_email">Please enter valid email</string>
+    <string name="new_debit_card_error_unknown">Error while trying to request new debit card. Please try again later</string>
+    <string name="new_debit_card_success_title">Successful debit card request</string>
+    <string name="new_debit_card_success_button_ok">OK</string>
+    <string name="error_loading_card_products">Error loading card products. Please try again later</string>
+
+    <!-- endregion -->
+
+    <!-- region Information -->
+
+    <!-- Information - Information -->
+    <string name="information_button_news">News</string>
+    <string name="information_button_offices_and_atms">Offices &amp; ATMs</string>
+    <string name="information_button_exchange_rates">Exchange rates</string>
+    <string name="information_button_settings">Settings</string>
+    <string name="information_button_manage_payees">Gestão de Beneficiários</string>
+    <string name="information_button_change_customer">Change customer</string>
+    <string name="information_button_logout">Log Out</string>
+    <string name="information_logout_dialog_text">Are you sure you want to log out?</string>
+    <string name="information_logout_dialog_confirmation_text">Sair</string>
+    <!-- Information - Exchange Rates -->
+    <string name="exchange_rates_title">Taxas de Câmbio</string>
+    <string name="exchange_rates_label_cash">Cash</string> <!-- Cash operations -->
+    <string name="exchange_rates_label_cashless">Cashless</string> <!-- Cashless operations -->
+    <string name="exchange_rates_label_date">Date</string>
+    <string name="exchange_rates_label_sell">Sell</string>
+    <string name="exchange_rates_label_buy">Buy</string>
+    <string name="exchange_rates_label_no_exchange_rates_for_given_date">No exchange rates for given date</string>
+    <string name="exchange_rates_fixed_rate">(fixed rate)</string>
+    <!-- Information - Offices and ATMs -->
+    <string name="offices_and_atms_title">Offices and ATMs</string>
+    <string name="services_offices_button">Offices</string>
+    <string name="services_atms_button">ATMs</string>
+    <string name="offices_title">Offices</string>
+    <string name="atms_title">ATMs</string>
+    <string name="offices_and_atms_location_permission_dialog_button_navigate_text">Definições</string>
+    <string name="offices_and_atms_location_permission_dialog_negative_button_text">Cancel</string>
+    <string name="offices_and_atms_enable_gps_dialog_title">Enable GPS</string>
+    <string name="offices_and_atms_enable_gps_dialog_text">Enable GPS otherwise location tracking won\'t work</string>
+    <string name="offices_and_atms_location_permission_dialog_button_text">OK</string>
+    <!-- Information - News -->
+    <string name="news_title">News</string>
+    <string name="news_label_today">Today</string>
+    <string name="news_label_yesterday">Yesterday</string>
+    <string name="news_title_message">Mensagem</string>
+    <string name="news_label_month_1">January</string>
+    <string name="news_label_month_2">February</string>
+    <string name="news_label_month_3">March</string>
+    <string name="news_label_month_4">April</string>
+    <string name="news_label_month_5">May</string>
+    <string name="news_label_month_6">June</string>
+    <string name="news_label_month_7">July</string>
+    <string name="news_label_month_8">August</string>
+    <string name="news_label_month_9">September</string>
+    <string name="news_label_month_10">October</string>
+    <string name="news_label_month_11">November</string>
+    <string name="news_label_month_12">December</string>
+    <!-- Information - Settings -->
+    <string name="settings_title">Definições</string>
+    <string name="settings_label_languages">Language</string>
+    <!-- Information - Settings - Language -->
+    <string name="language_title">Idioma</string>
+    <string name="language_dialog_message">Are you sure that you want to change language?</string>
+    <string name="language_dialog_confirm">Yes</string>
+    <string name="language_dialog_reject">Cancel</string>
+    <!-- Information - Change customer -->
+    <string name="change_customer_title">Change customer</string>
+    <string name="change_customer_dialog_message">Are you sure that you want to change customer?</string>
+    <string name="change_customer_dialog_confirm">Yes</string>
+    <string name="change_customer_dialog_reject">Cancel</string>
+    <!-- Information - Log Out -->
+    <string name="dialog_message_about_to_logout">You are about to exit the application. Are you sure that you still want to log out?</string>
+    <!-- endregion -->
+
+    <!-- region Services -->
+
+    <!-- Services -->
+    <string name="services_button_utility_bills">Utility bills</string>
+    <string name="services_button_insurance">Seguro</string>
+    <string name="services_button_cash_withdrawal">Cash withdrawal</string>
+    <string name="services_button_foreign_currency_exchange">Foreign currency exchange</string>
+    <!-- Services - Utility bills -->
+    <string name="utility_bills_label_title">Utility bills</string>
+    <string name="utility_bills_check_box_label_select_all">Select all</string>
+    <string name="utility_bills_label_provider">Provider</string>
+    <string name="utility_bills_label_subscription_number">Subscription number</string>
+    <string name="utility_bills_paid">Pago</string>
+    <string name="utility_bills_button_pay">Pay</string>
+    <string name="error_utility_bills_checking_amount_due">Error checking amount due</string>
+    <string name="error_forbidden_err_bills_duplicated_transaction">Attention duplicate payment. The transaction could not be performed</string>
+    <!-- Services - Utility bills - Summary -->
+    <string name="utility_bills_summary_title">Summary</string>
+    <string name="utility_bills_summary_label_amount">Amount</string>
+    <string name="utility_bills_summary_label_from">Origem</string>
+    <string name="utility_bills_summary_button_confirm_payment">Confirm</string>
+    <string name="utility_bills_history_title">Utility bills History</string>
+    <!-- Services - Insurances -->
+    <string name="insurance_title">Insurances</string>
+    <string name="insurance_list_no_insurances">No records found</string>
+    <string name="insurance_list_item_label_amount_bgn">Amount BGN</string><!-- List Item -->
+    <string name="insurance_list_item_label_amount">Amount:</string> <!-- Confirm -->
+    <string name="insurance_list_item_label_amount_currency">Amount %1$s</string> <!-- List Item -->
+    <string name="insurance_list_item_label_date">Date</string> <!-- List Item -->
+    <string name="insurance_list_item_label_policy_num">Policy number</string><!-- List Item -->
+    <string name="insurance_list_item_label_insurer">Insurer</string><!-- List Item -->
+    <string name="insurance_list_item_label_account_bgn">Account BGN</string><!-- List Item -->
+    <string name="insurance_list_item_label_account_currency">Account %1$s</string><!-- List Item, Code -->
+    <string name="insurance_list_item_label_Installment_number">Installment number</string><!-- List Item, Code -->
+    <string name="insurance_list_item_button_pay">Pay</string>
+    <!-- Services - Insurances - Payment -->
+    <string name="insurance_payment_title">Insurance payment</string>
+    <string name="insurance_payment_label_select_source_account">Pay From</string>
+    <string name="insurance_payment_label_amount">Amount:</string>
+    <string name="insurance_payment_label_from">From:</string>
+    <string name="insurance_payment_button_confirm">Confirm</string>
+    <!-- Services - Cash withdrawal -->
+    <string name="cash_withdrawal_title">Cash withdrawal</string>
+    <string name="cash_withdrawal_form_placeholder_location">Withdrawal location</string>
+    <string name="cash_withdrawal_form_placeholder_amount">Amount</string>
+    <string name="cash_withdrawal_form_placeholder_date">Data</string>
+    <string name="cash_withdrawal_form_placeholder_description">Detahles</string>
+    <string name="cash_withdrawal_button_next">Next</string>
+    <string name="error_loading_branches">An error appeared while loading the branches</string>
+    <string name="error_cash_withdrawal_location">Chose withdrawal location</string>
+    <string name="error_cash_withdrawal_date">Please chose date for the operation</string>
+    <string name="error_bad_argument_cash_withdrawal_date">Notice of at least two working days is required!</string>
+    <string name="error_bad_argument_not_valid">Invalid data entered, please try again!</string>
+    <string name="error_bad_argument_wrong_password">Wrong password. Please try again!</string>
+    <string name="error_bad_argument_equal_new_and_old_username">O novo utilizador não coincide.</string>
+    <!-- Services - Currency Exchange -->
+    <string name="currency_exchange_form_label_details">Detahles</string>
+    <string name="currency_exchange_form_placeholder_amount">Montante</string>
+    <string name="currency_exchange_form_placeholder_preferential_rates_pin">PIN for preferential rates</string>
+    <string name="currency_exchange_form_label_operation_type">Operation type</string>
+    <string name="currency_exchange_label_type_sell">Venda</string>
+    <string name="currency_exchange_label_type_buy">Compra</string>
+    <!-- endregion -->
+
+    <!-- region Shared and Errors -->
+
+    <!-- Shared -->
+    <string name="common_button_next">Próximo</string>
+    <string name="common_button_dismiss">Ignorar</string>
+    <string name="common_button_close">Fechar</string>
+    <string name="common_label_success">Successo</string>
+    <!-- Shared - Dialogs -->
+    <string name="dialog_button_back_to_login">Back to login</string>
+    <!-- Shared - Errors -->
+    <string name="error_generic">Algo deu errado</string>
+    <string name="error_authentication_sca_cancelled">The operation was rejected in SmartID.</string>
+    <string name="error_authentication_otp_expired">O código expirou.</string>
+    <string name="error_authentication_sca_error">Allianz SmartID Error</string>
+    <string name="error_authentication_otp_invalid">Código inválido. Tentativas restantes: %1$s</string>
+    <string name="error_authentication_otp_alreadyConfirmed">Operação já confirmada.</string>
+    <string name="error_authentication_session_expired">Sua sessão expirou. Faça login novamente.</string>
+    <string name="error_transfer_validation">Impossível validar a transferência.</string>
+    <string name="error_transfer_validation_invalid_iban">IBAN inválido</string>
+    <string name="error_transfer_validation_same_source_and_destination">IBAN cannot be identical to the selected source account. Please choose another IBAN.</string>
+    <string name="error_transfer_validation_invalid_bulgarian_iban">Invalid Bulgarian Iban</string>
+    <string name="error_transfer_validation_iban_not_from_current_bank">Destination Account is from another bank!</string>
+    <string name="error_transfer_validation_required_beneficiary">Data é obrigatória</string>
+    <string name="error_transfer_validation_required_reason">Reason is required and should be less than %1$s characters long</string>
+    <string name="error_transfer_validation_amount_greater_than_zero">Amount must be greater than 0</string>
+    <string name="error_transfer_validation_betweenacc_same_currency_account">Accounts need to have the same currency</string>
+    <string name="error_transfer_validation_destination_account_invalid">O número da conta do Beneficiário deve ter entre 8 a 36 caracteres.</string>
+    <string name="error_transfer_validation_insufficient_funds">Conta de débito sem saldo suficiente.</string>
+    <string name="destination_account_not_found">Conta Destinção não Encontra.</string>
+    <string name="error_transfer_creation">Transfer Creation Error</string>
+    <string name="error_transfer_confirm">Transfer Confirmation Error</string>
+    <string name="error_loading_accounts">There was an error while trying to load your accounts. Please try again later.</string>
+    <string name="error_loading_accounts_statements">There was an error while trying to load your account statement. Please try again later.</string>
+    <string name="error_loading_cards">There was an error while trying to load your cards. Please try again later.</string>
+    <string name="error_loading_exchange_rates">There was an error while trying to load exchange rates. Please try again later.</string>
+    <string name="error_loading_customers">There was an error while trying to load customers. Please try again later.</string>
+    <string name="error_loading_templates">There was an error while trying to load your templates. Please try again later.</string>
+    <string name="error_loading_pending_transfers">There was an error while trying to load pending transfers. Please try again later.</string>
+    <string name="error_loading_insurances">There was an error while trying to load your insurances. Please try again later.</string>
+    <string name="error_loading_billers">Error loading billers</string>
+    <string name="error_no_connection">No Internet connection available. Please check your Wi-Fi or Mobile data settings.</string>
+    <string name="error_loading_news">There was an error while trying to load news. Please try again later.</string>
+    <string name="error_transfer_validation_preferential_rates_pin_length">The pin must be less than or equal to 10 symbols</string>
+    <string name="error_currency_exchange_validation_same_currency_account">Accounts should not have the same currency</string>
+    <string name="error_utility_bills_selected">Please select a bill</string>
+    <string name="error_utility_bills_eod_check">Dear clients, currently payments can not be executed due to running end-of-day procedure. Please try again later. Thank you for your understanding!</string>
+    <string name="error_loading_transfer_history">There was an error while trying to load your transfer history</string>
+    <!-- Shared - Errors - Login related errors -->
+    <string name="error_authentication_login">Authentication Error</string>
+    <string name="error_access_denied_invalid_credentials">Credenciais inválidas!</string>
+    <string name="error_access_denied_account_deactivated">A conta foi desativada!</string>
+    <string name="error_authentication_invalid_username_login">Credenciais inválidas!</string>
+    <string name="error_authentication_invalid_password_login">Credenciais inválidas!</string>
+    <string name="error_authentication_sca_cancelled_login">Authentication Error: Allianz SmartID Authentication cancelled</string>
+    <string name="error_authentication_sca_expired_login">Authentication Error: Allianz SmartID authentication expired</string>
+    <string name="error_authentication_sca_error_login">Authentication Error: Allianz SmartID Error</string>
+    <string name="error_authentication_invalid_mobile_number_error_login">Authentication Error: You are registered with another mobile number in electronic banking. Please make a new registration through SmartID.</string>
+
+    <!-- endregion -->
+
+    <string name="error_bad_argument_both_accounts_in_local_currency">Both the currency of the debited and the currency of the credited account is local.</string>
+    <string name="error_destination_account_is_outside_bank">Insert internal bank account!</string>
+
+    <!--  region Fallback  -->
+    <string name="fallback_use_sms_button">Use SMS</string>
+    <string name="fallback_error_confirming_action_use_sms">There is no connection to SmartID. You can use SMS code instead.</string>
+    <string name="fallback_dialog_enter_sms_code">Verification code</string>
+    <string name="fallback_enter_sms_code">Enter the 6-digit verification code we\'ve sent to you:</string>
+    <string name="fallback_enter_sms_code_and_pin">Enter the 6-digit verification code we\'ve sent to you and your PIN:</string>
+    <string name="fallback_sms_code">SMS Code</string>
+    <string name="fallback_pin">PIN</string>
+    <string name="fallback_dialog_error_enter_sms_code">Data é obrigatória</string>
+    <string name="fallback_dialog_error_enter_pin">Data é obrigatória</string>
+    <string name="fallback_complete_action_via_sms_code">Confirm operation via SMS code</string>
+    <string name="fallback_complete_action_via_sms_code_and_pin">Confirm operation via SMS code and PIN</string>
+    <string name="fallback_error_sending_sms">There was an error sending the SMS. Please try again later.</string>
+    <string name="fallback_verification_code">Verification code</string>
+    <string name="fallback_confirm_button">Confirm</string>
+    <string name="fallback_enter_pin">Enter PIN</string>
+    <string name="fallback_login_via_sms">Login via SMS code</string>
+    <string name="fallback_login_via_sms_and_pin">Login via SMS code and PIN</string>
+    <string name="fallback_confirm_transfer_via_sms">Confirm transfer via SMS code</string>
+    <string name="fallback_confirm_transfer_via_sms_and_pin">Confirm transfer via SMS code and PIN</string>
+    <!--  endregion  -->
+
+    <!-- region Nomenclatures -->
+
+    <!--  Settings keys -->
+    <string name="ui_settings_pref_key">uiSettings</string>
+
+    <!-- Currencies -->
+    <string name="common_confirmation_dialog_message">Are you sure?</string>
+    <string name="common_dialog_message_cancel_transaction">Are you sure that you want to cancel the transaction?</string>
+    <string name="common_confirm_message">OK</string>
+    <string name="common_reject_message">Não</string>
+    <string name="common_cancel">Cancel</string>
+
+    <!-- endregion -->
+
+    <!-- Common Dialog and other Labels -->
+    <string name="common_ok">OK</string>
+    <string name="common_please_wait">Please wait…</string>
+    <string name="common_error_field_required">Data é obrigatória</string>
+    <string name="menu_info_label">Info</string>
+    <string name="menu_history_label">History</string>
+    <string name="menu_notification_label">Notification</string>
+    <string name="menu_close_label">Fechar</string>
+    <string name="menu_cancel_label">Cancelar</string>
+    <string name="menu_add_label">Add</string>
+    <string name="common_label_currency">Moeda</string>
+    <string name="common_amount_with_currency" translatable="false">%1$s %2$s</string>
+    <string name="title_change_password">Change password</string>
+    <string name="common_button_submit">Enviar</string>
+    <string name="passwords_do_not_match">Both passwords must match</string>
+    <string name="settings_change_password_success">"Your password has been changed successfully! "</string>
+
+    <!-- Non-Translatable common templates -->
+    <string name="settings_change_password_success_dialog_title">Password successfully changed</string>
+    <string name="title_change_username">Change username</string>
+    <string name="settings_change_username_success_dialog_title">Username changed</string>
+    <string name="settings_change_username_success">Username successfully changed!</string>
+    <string name="error_conflict_already_exists">O nome de utilizador já está sendo usado.</string>
+    <string name="usernames_do_not_match">Usernames do not match</string>
+    <string name="error_authentication_otp_locked">Your OTP verification has failed</string>
+    <string name="error_authentication_otp_executionError">Execution error</string>
+    <string name="transfer_confirm_otp_code">OTP Code</string>
+    <string name="transfer_form_placeholder_payee_email">E-Mail</string>
+    <string name="new_payee_add_to_payee_list">Adicionar como Beneficiário</string>
+    <string name="transfer_form_placeholder_payee_bank">Banco</string>
+    <string name="transfer_form_placeholder_payee_swift_code">SWIFT</string>
+    <string name="settings_change_username_placeholder_currentUsername">Utilizador actual</string>
+    <string name="settings_change_username_placeholder_newUsername">Novo Utilizador</string>
+    <string name="settings_change_username_placeholder_repeatUsername">Confirmar</string>
+    <string name="settings_change_password_placeholder_currentPassword">Palavra-passe actual</string>
+    <string name="settings_change_password_placeholder_newPassword">Nova palavra-passe</string>
+    <string name="settings_change_password_placeholder_repeatPassword">Confirmar</string>
+    <string name="settings_label_change_username">Alterar Nome Utilizador</string>
+    <string name="settings_label_change_password">Alterar Palavra-passe</string>
+    <string name="error_transfer_validation_email_invalid">Não é um email válido</string>
+    <string name="template_details_label_transferType">Transacção</string>
+    <string name="template_label_email">E-Mail</string>
+    <string name="template_label_account_number">Conta</string>
+    <string name="template_label_payee_currency">Moeda</string>
+    <string name="template_details_make_transfer">Transferência</string>
+    <string name="template_details_edit">Editar</string>
+    <string name="template_details_delete">Apagar</string>
+    <string name="template_details_are_you_sure_you_want_to_delete">Tem a certeza que pretende eliminar o Beneficiário</string>
+    <string name="template_deletion_success">Beneficiário excluído com sucesso</string>
+    <string name="template_deletion_error">Não foi possível atender ao seu pedido, tente mais tarde.</string>
+    <string name="new_payee_title">Novo Beneficiário</string>
+    <string name="template_creation_success">Beneficiário criado com sucesso</string>
+    <string name="template_creation_error">Ocorreu um erro ao criar o beneficiário. Por favor, tente novamente mais tarde</string>
+    <string name="template_edit_error">Ocorreu um erro ao editar o beneficiário. Por favor, tente novamente mais tarde</string>
+    <string name="error_fetching_banks">Ocorreu um erro ao buscar os bancos disponíveis. Por favor, tente novamente mais tarde</string>
+    <string name="edit_payee_title">Editar Beneficiário</string>
+    <string name="template_edit_success">Beneficiário editado com sucesso</string>
+    <string name="common_confirm_action">Confirmar ação</string>
+    <string name="username_must_match_criteria"><![CDATA[Nome utilizador inválido. Deve ter entre 6 e 128 caracteres. Permitido: caracteres minúsculos e maiúsculos, dígitos, "@", and "."]]></string>
+    <string name="password_must_match_criteria"><![CDATA[A senha deve ter entre 8 e 100 caracteres e conter pelo menos um caractere minúsculo e um maiúsculo. Pode conter dígitos e caracteres especiais: #@.!><\\]]></string>
+    <string-array name="between_account_currencies">
+        <item>USD</item>
+    </string-array>
+    <string-array name="national_iban_currencies">
+        <item>USD</item>
+    </string-array>
+    <string-array name="internal_transfer_currencies">
+        <item>USD</item>
+    </string-array>
+    <string-array name="utility_bills_currencies">
+        <item>USD</item>
+    </string-array>
+    <string-array name="cash_withdrawal_currencies">
+        <item>USD</item>
+    </string-array>
+    <string name="initiate_pending_transfer">Registar Pedido</string>
+    <string name="start_date_must_be_before_end_date">Start date must be before end date</string>
+    <string name="end_date_must_be_after_start_date">End date must be after start date</string>
+
+</resources>

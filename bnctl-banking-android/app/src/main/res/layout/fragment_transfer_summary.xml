@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transfer_summary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.banking.fragments.transfers.summary.TransferSummaryFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:menu="@menu/toolbar_menu_close"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            style="@style/toolbar_title"
+            android:text="@string/transfer_summary_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="@dimen/fragment_padding">
+
+            <LinearLayout
+                android:id="@+id/fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/button_transfer_confirm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside">
+
+                <!-- Transfer Amount -->
+                <androidx.cardview.widget.CardView
+                    style="@style/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_views_margin_vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fragment_padding">
+
+                        <TextView
+                            android:id="@+id/transfer_amount_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                            android:text="@string/transfer_summary_label_amount"
+                            android:textColor="@color/text_color_secondary"
+                            android:textSize="@dimen/text_size_smaller"
+                            app:layout_constraintBottom_toTopOf="@id/transfer_amount"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/transfer_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/text_margin_horizontal"
+                            android:textSize="@dimen/text_size_large"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/transfer_amount_label"
+                            tools:text="500" />
+
+                        <TextView
+                            android:id="@+id/transfer_currency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/text_margin_horizontal"
+                            android:textColor="@color/text_color_secondary"
+                            android:textSize="@dimen/text_size_normal"
+                            app:layout_constraintBaseline_toBaselineOf="@id/transfer_amount"
+                            app:layout_constraintStart_toEndOf="@+id/transfer_amount"
+                            tools:text="BGN" />
+
+                        <ImageButton
+                            android:id="@+id/button_edit_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:backgroundTint="@android:color/transparent"
+                            android:padding="@dimen/image_button_padding"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_edit" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Source Account -->
+                <androidx.cardview.widget.CardView
+                    style="@style/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_views_margin_vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fragment_padding">
+
+                        <TextView
+                            android:id="@+id/source_account_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                            android:text="@string/transfer_summary_label_from"
+                            android:textColor="@color/text_color_secondary"
+                            android:textSize="@dimen/text_size_smaller"
+                            app:layout_constraintBottom_toTopOf="@id/source_account_image"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/source_account_image"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                            android:layout_marginEnd="@dimen/fragment_views_margin_horizontal"
+                            android:background="@drawable/outline_common"
+                            android:src="@drawable/ic_account"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/source_account_label"
+                            app:shapeAppearanceOverlay="@style/rounded_image_view"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+                            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/button_edit_source_account"
+                            app:layout_constraintStart_toEndOf="@id/source_account_image"
+                            app:layout_constraintTop_toBottomOf="@id/source_account_label">
+
+                            <TextView
+                                android:id="@+id/source_account_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text_size_normal"
+                                tools:text="Current Account" />
+
+                            <TextView
+                                android:id="@+id/source_account_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_color_secondary"
+                                android:textSize="@dimen/text_size_smaller"
+                                tools:text="BG11BNBG97451028545673" />
+
+                            <TextView
+                                android:id="@+id/source_account_balance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/fragment_views_margin_vertical"
+                                android:textStyle="bold"
+                                tools:text="Balance: 2000.50 BGN" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/button_edit_source_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:backgroundTint="@android:color/transparent"
+                            android:padding="@dimen/image_button_padding"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_edit" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Destination Account -->
+                <androidx.cardview.widget.CardView
+                    style="@style/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_views_margin_vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fragment_padding">
+
+                        <TextView
+                            android:id="@+id/destination_account_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                            android:text="@string/transfer_summary_label_to"
+                            android:textColor="@color/text_color_secondary"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintBottom_toTopOf="@id/destination_account_image"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/destination_account_image"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                            android:layout_marginEnd="@dimen/fragment_views_margin_horizontal"
+                            android:background="@drawable/outline_common"
+                            android:src="@drawable/ic_account"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/destination_account_label"
+                            app:shapeAppearanceOverlay="@style/rounded_image_view"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/fragment_views_margin_horizontal"
+                            android:layout_marginTop="@dimen/fragment_views_margin_vertical_shorter"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/button_edit_destination_account"
+                            app:layout_constraintStart_toEndOf="@id/destination_account_image"
+                            app:layout_constraintTop_toBottomOf="@id/destination_account_label">
+
+                            <TextView
+                                android:id="@+id/destination_account_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text_size_normal"
+                                tools:text="Kolio Klienta" />
+
+                            <TextView
+                                android:id="@+id/destination_account_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_color_secondary"
+                                android:textSize="@dimen/text_size_smaller"
+                                tools:text="BG11BNBG97451028545673" />
+
+                            <TextView
+                                android:id="@+id/destination_account_balance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/fragment_views_margin_vertical"
+                                android:textStyle="bold"
+                                android:visibility="gone"
+                                tools:text="Balance: 2000.50 BGN" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/button_edit_destination_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:backgroundTint="@android:color/transparent"
+                            android:padding="@dimen/image_button_padding"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_edit" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Transfer Description -->
+                <androidx.cardview.widget.CardView
+                    style="@style/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_views_margin_vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fragment_padding">
+
+                        <TextView
+                            android:id="@+id/description_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                            android:text="@string/transfer_summary_label_reason"
+                            android:textColor="@color/text_color_secondary"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintBottom_toTopOf="@id/description_value"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/description_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/text_margin_horizontal"
+                            android:textSize="@dimen/text_size_normal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:text="Money that I borrowed from John" />
+
+                        <ImageButton
+                            android:id="@+id/button_edit_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:backgroundTint="@android:color/transparent"
+                            android:padding="@dimen/image_button_padding"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_edit" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Transfer Fee -->
+                <androidx.cardview.widget.CardView
+                    style="@style/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_views_margin_vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fragment_padding">
+
+                        <TextView
+                            android:id="@+id/fee_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/fragment_views_margin_vertical_shorter"
+                            android:text="@string/transfer_summary_label_fee"
+                            android:textColor="@color/text_color_secondary"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintBottom_toTopOf="@id/fee_value"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/fee_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_normal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:text="80.08 EUR" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_transfer_confirm"
+                style="@style/bottom_action_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:text="@string/transfer_summary_button_confirm_payment"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fields" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

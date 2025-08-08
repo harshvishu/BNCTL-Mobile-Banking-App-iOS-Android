@@ -1,0 +1,28 @@
+package tl.bnctl.banking.ui.banking.fragments.transfers.create.sections.account.destination.myaccount
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import tl.bnctl.banking.connectivity.RetrofitService
+import tl.bnctl.banking.data.accounts.AccountsDataSource
+import tl.bnctl.banking.data.accounts.AccountsRepository
+import tl.bnctl.banking.data.accounts.AccountsService
+
+class SelectDestinationAccountViewModelFactory: ViewModelProvider.Factory {
+    private fun getAccountsService(): AccountsService {
+        val retrofit = RetrofitService.getInstance()
+        return retrofit.getService(AccountsService::class.java)
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(SelectDestinationAccountViewModel::class.java)) {
+            val accountsService = getAccountsService()
+            return SelectDestinationAccountViewModel(
+                accountsRepository = AccountsRepository(
+                    dataSource = AccountsDataSource(accountsService)
+                )
+            ) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class.")
+    }
+}

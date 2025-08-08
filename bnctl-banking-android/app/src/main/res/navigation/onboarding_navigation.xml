@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_navigation"
+    app:startDestination="@id/nav_fragment_intro">
+
+    <fragment
+        android:id="@+id/nav_fragment_intro"
+        android:name="tl.bnctl.banking.ui.onboarding.fragments.intro.IntroFragment"
+        android:label="IntroFragment"
+        tools:layout="@layout/fragment_intro">
+        <action
+            android:id="@+id/action_nav_fragment_intro_to_nav_fragment_terms_and_conditions"
+            app:destination="@id/nav_fragment_terms_and_conditions" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fragment_terms_and_conditions"
+        android:name="tl.bnctl.banking.ui.onboarding.fragments.terms.TermsAndConditionsFragment"
+        android:label="TermsAndConditionsFragment"
+        tools:layout="@layout/fragment_terms_and_conditions">
+        <action
+            android:id="@+id/action_nav_fragment_terms_and_conditions_to_login_navigation"
+            app:destination="@id/login_navigation" />
+    </fragment>
+
+    <include
+        android:id="@+id/login_navigation"
+        app:graph="@navigation/login_navigation" />
+
+</navigation>

@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MobileBanking.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/textColorOnPrimary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryLightColor</item>
+        <item name="colorOnSecondary">@color/textColorOnSecondary</item>
+        <!-- Status bar color. -->
+      <item name="android:statusBarColor" tools:targetApi="l">@color/primaryColor</item>
+      <item name="android:textColor">@color/text_color_primary</item>
+      <item name="android:colorBackground">@color/app_background_color</item>
+      <item name="colorControlHighlight">@color/rippleEffectColor</item>
+      <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+    </style>
+
+  <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+  </style>
+
+
+  <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+  </style>
+</resources>

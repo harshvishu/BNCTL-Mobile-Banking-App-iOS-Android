@@ -1,0 +1,15 @@
+//
+//  uat.xcconfig
+//  Allianz
+//
+//  Created by Evgeniy Raev on 23.11.21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "base.xcconfig"
+
+BASE_URL = https:/$()/192.168.90.51:8090/
+APP_NAME = BNCTL UAT
+APP_BUNDLE_ID = tl.bnctl.banking.uat

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    android:orientation="vertical"
+    tools:context=".ui.banking.fragments.cards.CardDetailsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_details_title" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Body -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="@dimen/fragment_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detailsCardView"
+                style="@style/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_views_margin_vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/fragment_padding">
+
+                    <!-- Status -->
+                    <TextView
+                        android:id="@+id/tv_label_status"
+                        style="@style/card_details_label"
+                        android:text="@string/cards_label_status"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_label_card_number"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_card_status"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_card_status"
+                        style="@style/card_details_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_status"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_status"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_status"
+                        tools:text="Active" />
+
+                    <!-- Card Number -->
+                    <TextView
+                        android:id="@+id/tv_label_card_number"
+                        style="@style/card_details_label"
+                        android:text="@string/cards_label_card_number"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_label_card_holder"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_card_number"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_label_status" />
+
+                    <TextView
+                        android:id="@+id/tv_card_number"
+                        style="@style/card_details_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_card_number"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_card_number"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_card_number"
+                        tools:text="1234 **** **** 6666" />
+
+                    <!-- Card Holder -->
+                    <TextView
+                        android:id="@+id/tv_label_card_holder"
+                        style="@style/card_details_label"
+                        android:text="@string/cards_label_card_holder"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_label_card_owner"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_card_holder"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_label_card_number" />
+
+                    <TextView
+                        android:id="@+id/tv_card_holder"
+                        style="@style/card_details_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_card_holder"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_card_holder"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_card_holder"
+                        tools:text="Ron Jeremy" />
+
+                    <TextView
+                        android:id="@+id/tv_label_card_owner"
+                        style="@style/card_details_label"
+                        android:text="@string/cards_label_card_owner"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_label_valid_thru"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_card_owner"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_label_card_holder" />
+
+                    <TextView
+                        android:id="@+id/tv_card_owner"
+                        style="@style/card_details_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_card_owner"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_card_owner"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_card_owner"
+                        tools:text="Woody Johnson" />
+
+                    <TextView
+                        android:id="@+id/tv_label_valid_thru"
+                        style="@style/card_details_label"
+                        android:text="@string/cards_label_valid_thru"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_label_linked_to"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_valid_thru"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_label_card_owner" />
+
+                    <TextView
+                        android:id="@+id/tv_valid_thru"
+                        style="@style/card_details_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_valid_thru"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_valid_thru"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_valid_thru"
+                        tools:text="08/08" />
+
+
+                    <TextView
+                        android:id="@+id/tv_label_linked_to"
+                        style="@style/card_details_label"
+                        android:text="@string/cards_label_linked_to"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_label_currency"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_linked_to"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_label_valid_thru" />
+
+                    <TextView
+                        android:id="@+id/tv_linked_to"
+                        style="@style/card_details_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_linked_to"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_linked_to"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_linked_to"
+                        tools:text="BG20BUIN99991000009009" />
+
+                    <TextView
+                        android:id="@+id/tv_label_currency"
+                        style="@style/card_details_label"
+                        android:text="@string/cards_label_currency"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_label_card_type"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_currency"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_label_linked_to" />
+
+                    <TextView
+                        android:id="@+id/tv_currency"
+                        style="@style/card_details_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_currency"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_currency"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_currency"
+                        tools:text="BGN" />
+
+                    <TextView
+                        android:id="@+id/tv_label_card_type"
+                        style="@style/card_details_label"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/cards_label_card_type"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_card_type"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_label_currency" />
+
+                    <TextView
+                        android:id="@+id/tv_card_type"
+                        style="@style/card_details_text"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_card_type"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_card_type"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_card_type"
+                        tools:text="MasterCard Credit безк.-Пакет-Персонални" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/availabilityCardView"
+                style="@style/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/fragment_padding">
+
+                    <TextView
+                        android:id="@+id/tv_label_availability"
+                        style="@style/card_details_label"
+                        android:text="@string/cards_label_availability"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_label_approved_overdraft"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_card_availability"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_card_availability"
+                        style="@style/card_details_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_availability"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_availability"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_availability"
+                        tools:text="0.00" />
+
+                    <TextView
+                        android:id="@+id/tv_label_approved_overdraft"
+                        style="@style/card_details_label"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/cards_label_approved_overdraft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_approved_overdraft"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_label_availability" />
+
+                    <TextView
+                        android:id="@+id/tv_approved_overdraft"
+                        style="@style/card_details_text"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_label_approved_overdraft"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_label_approved_overdraft"
+                        app:layout_constraintTop_toTopOf="@+id/tv_label_approved_overdraft"
+                        tools:text="0.00" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/common_templates_navigation"
+    app:startDestination="@id/nav_fragment_templates">
+
+    <fragment
+        android:id="@+id/nav_fragment_templates"
+        android:name="tl.bnctl.banking.ui.banking.fragments.transfers.templates.TemplatesFragment"
+        tools:layout="@layout/fragment_templates">
+
+        <argument
+            android:name="directToTransferCreation"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_nav_fragment_templates_to_nav_fragment_template_details"
+            app:destination="@id/nav_fragment_template_details">
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+        </action>
+        <action
+            android:id="@+id/action_nav_fragment_templates_to_nav_fragment_create_template"
+            app:destination="@id/nav_fragment_create_template">
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+        </action>
+        <action
+            android:id="@+id/action_nav_fragment_templates_to_nav_fragment_internal_transfer"
+            app:destination="@id/nav_fragment_internal_transfer">
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+        </action>
+
+        <action
+            android:id="@+id/action_nav_fragment_templates_to_nav_fragment_iban_transfer"
+            app:destination="@id/nav_fragment_iban_transfer">
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+        </action>
+
+        <action
+            android:id="@+id/action_nav_fragment_templates_to_nav_fragment_transfer_between_own_accounts"
+            app:destination="@id/nav_fragment_transfer_between_own_accounts">
+            <argument
+                android:name="template"
+                android:defaultValue="@null"
+                app:argType="tl.bnctl.banking.data.templates.model.Template"
+                app:nullable="true" />
+        </action>
+    </fragment>
+
+</navigation>

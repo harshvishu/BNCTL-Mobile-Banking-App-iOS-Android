@@ -1,0 +1,14 @@
+//
+//  common.xcconfig
+//  MobileBanking
+//
+//  Created by Kavitha Sambandam on 16/12/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+LOGIN_TIMEOUT = 300
+CURRENCY_DECIMAL_SEPARATOR = .
+CURRENCY_GROUP_SEPARATOR = ,

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/language_menu_item_bg"
+    style="@style/fragment_list_item"
+    android:drawableLeft="@drawable/ic_language_bg"
+    android:text="Български"
+    android:textStyle="normal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="RtlHardcoded" />
